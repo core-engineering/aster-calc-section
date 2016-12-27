@@ -75,7 +75,7 @@ FIN();
                      révision 77d3379d51e8 - branche 'v12'                      
                          Copyright EDF R&D 1991 - 2016                          
                                                                                 
-                    Exécution du : Tue Dec 27 14:33:36 2016                     
+                    Exécution du : Tue Dec 27 15:15:29 2016                     
                      Nom de la machine : camille-VirtualBox                     
                               Architecture : 64bit                              
                           Type de processeur : x86_64                           
@@ -171,9 +171,9 @@ FIN();
 
   Relecture des catalogues des éléments faite.
 
-  Fin de lecture (durée  0.000000  s.) 
+  Fin de lecture (durée  0.020000  s.) 
   # Mémoire (Mo) :   342.86 /   337.30 /    35.93 /    19.37 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin commande No : 0001   user+syst:        0.06s (syst:        0.05s, elaps:        0.07s)
+  # Fin commande No : 0001   user+syst:        0.05s (syst:        0.02s, elaps:        0.11s)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -192,30 +192,30 @@ FIN();
 
 ------------ MAILLAGE mesh     - IMPRESSIONS NIVEAU  1 ------------
 
-MA-27-DECE-2016 14:33:36                                                        
+MA-27-DECE-2016 15:15:29                                                        
 
-NOMBRE DE NOEUDS                        6485
+NOMBRE DE NOEUDS                        2474
 
-NOMBRE DE MAILLES                      12968
-                              SEG2                 1136
-                              TRIA3               11832
+NOMBRE DE MAILLES                       4946
+                              SEG2                  540
+                              TRIA3                4406
 
 NOMBRE DE GROUPES DE NOEUDS                4
-                              Group_Of_All_Nodes                6485
+                              Group_Of_All_Nodes                2474
                               MyPoint                              1
-                              MySect                            6485
-                              MyBorder                          1136
+                              MySect                            2474
+                              MyBorder                           540
 
 NOMBRE DE GROUPES DE MAILLES               4
-                              Group_Of_All_Edges                1136
-                              MyBorder                          1136
-                              Group_Of_All_Faces               11832
-                              MySect                           11832
+                              Group_Of_All_Edges                 540
+                              MyBorder                           540
+                              Group_Of_All_Faces                4406
+                              MySect                            4406
 
 --------------------------------------------------------------------------------
 
-  # Mémoire (Mo) :   342.86 /   339.83 /    35.93 /    19.37 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin commande No : 0002   user+syst:        0.09s (syst:        0.01s, elaps:        0.10s)
+  # Mémoire (Mo) :   342.86 /   338.82 /    35.93 /    19.37 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0002   user+syst:        0.04s (syst:        0.01s, elaps:        0.08s)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -229,17 +229,17 @@ NOMBRE DE GROUPES DE MAILLES               4
                              TABLE_CARA='NON',)
 
 
-Sur les 12968 mailles du maillage .9000003, on a demandé l'affectation de 12968, on a pu en affecter 12968
+Sur les 4946 mailles du maillage .9000003, on a demandé l'affectation de 4946, on a pu en affecter 4946
  Modélisation     Type maille  Élément fini     Nombre
- D_PLAN           TRIA3        MEDPTR3          11832
-                  SEG2         MEPLSE2          1136
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.02      0.00      0.03
+ D_PLAN           TRIA3        MEDPTR3          4406
+                  SEG2         MEPLSE2          540
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.01
 
  MATERIAU : .9000005
  RELATION DE COMPORTEMENT: ELAS                            
 
 
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.04      0.00      0.04
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.02
    
    !----------------------------------------------------------------!
    ! <A> <MODELISA7_9>                                              !
@@ -254,35 +254,35 @@ Sur les 12968 mailles du maillage .9000003, on a demandé l'affectation de 12968
 
 ------------ MAILLAGE .9000008 - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 12.06.00 CONCEPT .9000008 CALCULE LE 27/12/2016 A 14:33:36 DE TYPE        
+ASTER 12.06.00 CONCEPT .9000008 CALCULE LE 27/12/2016 A 15:15:29 DE TYPE        
 MAILLAGE_SDASTER                                                                
 
-NOMBRE DE NOEUDS                        6485
+NOMBRE DE NOEUDS                        2474
 
-NOMBRE DE MAILLES                      12968
-                              SEG2                 1136
-                              TRIA3               11832
+NOMBRE DE MAILLES                       4946
+                              SEG2                  540
+                              TRIA3                4406
 
 NOMBRE DE GROUPES DE NOEUDS                4
-                              Group_Of_All_Nodes                6485
+                              Group_Of_All_Nodes                2474
                               MyPoint                              1
-                              MySect                            6485
-                              MyBorder                          1136
+                              MySect                            2474
+                              MyBorder                           540
 
 NOMBRE DE GROUPES DE MAILLES               4
-                              Group_Of_All_Edges                1136
-                              MyBorder                          1136
-                              Group_Of_All_Faces               11832
-                              MySect                           11832
+                              Group_Of_All_Edges                 540
+                              MyBorder                           540
+                              Group_Of_All_Faces                4406
+                              MySect                            4406
 
 --------------------------------------------------------------------------------
 
 
-Sur les 12968 mailles du maillage .9000008, on a demandé l'affectation de 12968, on a pu en affecter 12968
+Sur les 4946 mailles du maillage .9000008, on a demandé l'affectation de 4946, on a pu en affecter 4946
  Modélisation     Type maille  Élément fini     Nombre
- PLAN             SEG2         THPLSE2          1136
- PLAN             TRIA3        THPLTR3          11832
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
+ PLAN             SEG2         THPLSE2          540
+ PLAN             TRIA3        THPLTR3          4406
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.02
 
  MATERIAU : .9000010
  RELATION DE COMPORTEMENT: THER                            
@@ -372,7 +372,7 @@ Sur les 12968 mailles du maillage .9000008, on a demandé l'affectation de 12968
    !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
    !  Grandeur : SOUR_R   Composante non reconnue : SOUR                           !
    !                                                                               !
-   !  Ce problème concerne 1136 mailles                                            !
+   !  Ce problème concerne 540 mailles                                             !
    !  Les premières mailles concernées sont imprimées ci-dessous.                  !
    !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
    !                                                                               !
@@ -387,24 +387,24 @@ Sur les 12968 mailles du maillage .9000008, on a demandé l'affectation de 12968
   Maille : M4. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
   Maille : M5. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
 
-Le système linéaire à résoudre a 8757 degrés de liberté:
-   - 6485 sont des degrés de liberté physiques
-     (ils sont portés par 6485 noeuds du maillage)
-   - 2272 sont les couples de paramètres de Lagrange associés
-     aux 1136 relations linéaires dualisées.
+Le système linéaire à résoudre a 3554 degrés de liberté:
+   - 2474 sont des degrés de liberté physiques
+     (ils sont portés par 2474 noeuds du maillage)
+   - 1080 sont les couples de paramètres de Lagrange associés
+     aux 540 relations linéaires dualisées.
 
-La matrice est de taille 8757 équations.
-Elle contient 30481 termes non nuls si elle est symétrique et 52205 termes non nuls si elle n'est pas symétrique (le nombre de
+La matrice est de taille 3554 équations.
+Elle contient 12053 termes non nuls si elle est symétrique et 20552 termes non nuls si elle n'est pas symétrique (le nombre de
 termes non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
-Soit un taux de remplissage de   0.068 %.
+Soit un taux de remplissage de   0.163 %.
 
  Il n'y a pas d'état initial défini. On prend un état initial nul.
 
   Archivage des champs
     Champ stocké <TEMP> à l'instant  0.000000000000e+00 pour le numéro d'ordre 0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.600E-01
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.05      0.00      0.06
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.12      0.00      0.12
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   6.000E-02
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.03      0.00      0.04
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.03      0.00      0.07
    
    !-------------------------------------------------------------------------------!
    ! <A> <CHARGES2_87>                                                             !
@@ -489,7 +489,7 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.600E-01
    !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
    !  Grandeur : SOUR_F   Composante non reconnue : SOUR                           !
    !                                                                               !
-   !  Ce problème concerne 1136 mailles                                            !
+   !  Ce problème concerne 540 mailles                                             !
    !  Les premières mailles concernées sont imprimées ci-dessous.                  !
    !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
    !                                                                               !
@@ -504,24 +504,24 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.600E-01
   Maille : M4. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
   Maille : M5. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
 
-Le système linéaire à résoudre a 6487 degrés de liberté:
-   - 6485 sont des degrés de liberté physiques
-     (ils sont portés par 6485 noeuds du maillage)
+Le système linéaire à résoudre a 2476 degrés de liberté:
+   - 2474 sont des degrés de liberté physiques
+     (ils sont portés par 2474 noeuds du maillage)
    - 2 sont les couples de paramètres de Lagrange associés
      aux 1 relations linéaires dualisées.
 
-La matrice est de taille 6487 équations.
-Elle contient 24806 termes non nuls si elle est symétrique et 43125 termes non nuls si elle n'est pas symétrique (le nombre de
-termes non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
-Soit un taux de remplissage de   0.102 %.
+La matrice est de taille 2476 équations.
+Elle contient 9358 termes non nuls si elle est symétrique et 16240 termes non nuls si elle n'est pas symétrique (le nombre de termes
+non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
+Soit un taux de remplissage de   0.265 %.
 
  Il n'y a pas d'état initial défini. On prend un état initial nul.
 
   Archivage des champs
     Champ stocké <TEMP> à l'instant  0.000000000000e+00 pour le numéro d'ordre 0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.100E-01
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.05      0.00      0.07
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.17      0.01      0.17
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   6.000E-02
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.02      0.00      0.05
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.04      0.00      0.09
    
    !-------------------------------------------------------------------------------!
    ! <A> <CHARGES2_87>                                                             !
@@ -606,7 +606,7 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.100E-01
    !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
    !  Grandeur : SOUR_F   Composante non reconnue : SOUR                           !
    !                                                                               !
-   !  Ce problème concerne 1136 mailles                                            !
+   !  Ce problème concerne 540 mailles                                             !
    !  Les premières mailles concernées sont imprimées ci-dessous.                  !
    !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
    !                                                                               !
@@ -621,25 +621,25 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.100E-01
   Maille : M4. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
   Maille : M5. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
 
-Le système linéaire à résoudre a 6487 degrés de liberté:
-   - 6485 sont des degrés de liberté physiques
-     (ils sont portés par 6485 noeuds du maillage)
+Le système linéaire à résoudre a 2476 degrés de liberté:
+   - 2474 sont des degrés de liberté physiques
+     (ils sont portés par 2474 noeuds du maillage)
    - 2 sont les couples de paramètres de Lagrange associés
      aux 1 relations linéaires dualisées.
 
-La matrice est de taille 6487 équations.
-Elle contient 24806 termes non nuls si elle est symétrique et 43125 termes non nuls si elle n'est pas symétrique (le nombre de
-termes non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
-Soit un taux de remplissage de   0.102 %.
+La matrice est de taille 2476 équations.
+Elle contient 9358 termes non nuls si elle est symétrique et 16240 termes non nuls si elle n'est pas symétrique (le nombre de termes
+non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
+Soit un taux de remplissage de   0.265 %.
 
  Il n'y a pas d'état initial défini. On prend un état initial nul.
 
   Archivage des champs
     Champ stocké <TEMP> à l'instant  0.000000000000e+00 pour le numéro d'ordre 0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.800E-01
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.06      0.00      0.07
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.12      0.01      0.14
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.07      0.00      0.07
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   8.000E-02
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.04      0.00      0.04
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.05      0.00      0.10
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.02      0.00      0.04
    
    !--------------------------------------------------------------------------------------------!
    ! <A> <SUPERVIS_9>                                                                           !
@@ -665,1176 +665,580 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.800E-01
    COURBE DEFINIE PAR  1 CHEMIN(S)
      CHEMIN NUMERO  1 DE TYPE "CYCLE"
          MAILLES DEFINISSANT LE CHEMIN:
-          M1                    M1137   
-          M2                    M2539   
-          M3                    M1138   
-          M4                    M2540   
-          M5                    M1139   
-          M6                    M2541   
-          M7                    M1140   
-          M8                    M2542   
-          M9                    M1141   
-          M10                   M2543   
-          M11                   M1142   
-          M12                   M2544   
-          M13                   M1143   
-          M14                   M2545   
-          M15                   M1144   
-          M16                   M2546   
-          M17                   M1145   
-          M18                   M2547   
-          M19                   M1146   
-          M20                   M2548   
-          M21                   M1147   
-          M22                   M2549   
-          M23                   M1148   
-          M24                   M2550   
-          M25                   M1149   
-          M26                   M2551   
-          M27                   M1150   
-          M28                   M2552   
-          M29                   M1151   
-          M30                   M2553   
-          M31                   M1152   
-          M32                   M2554   
-          M33                   M1153   
-          M34                   M2555   
-          M35                   M1154   
-          M36                   M2556   
-          M37                   M1155   
-          M38                   M2557   
-          M39                   M1156   
-          M40                   M2558   
-          M41                   M1157   
-          M42                   M2559   
-          M43                   M1158   
-          M44                   M2560   
-          M45                   M1159   
-          M46                   M2561   
-          M47                   M1160   
-          M48                   M2562   
-          M49                   M1161   
-          M50                   M2563   
-          M51                   M1162   
-          M52                   M2564   
-          M53                   M1163   
-          M54                   M2565   
-          M55                   M1164   
-          M56                   M2566   
-          M57                   M1165   
-          M58                   M2567   
-          M59                   M1166   
-          M60                   M2568   
-          M61                   M1167   
-          M62                   M2569   
-          M63                   M1168   
-          M64                   M2570   
-          M65                   M1169   
-          M66                   M2571   
-          M67                   M1170   
-          M68                   M2572   
-          M69                   M1171   
-          M70                   M2573   
-          M71                   M1172   
-          M72                   M2574   
-          M73                   M1173   
-          M74                   M2575   
-          M75                   M1174   
-          M76                   M2576   
-          M77                   M1175   
-          M181                  M1369   
-          M180                  M1367   
-          M179                  M1366   
-          M178                  M1364   
-          M177                  M1363   
-          M176                  M1361   
-          M175                  M1360   
-          M174                  M1358   
-          M173                  M1357   
-          M172                  M1355   
-          M171                  M1354   
-          M170                  M1352   
-          M169                  M1351   
-          M168                  M1349   
-          M167                  M1348   
-          M166                  M1346   
-          M165                  M1345   
-          M164                  M1343   
-          M163                  M1342   
-          M162                  M1340   
-          M161                  M1339   
-          M160                  M1337   
-          M159                  M1336   
-          M158                  M1334   
-          M157                  M1333   
-          M156                  M1331   
-          M155                  M1330   
-          M209                  M2578   
-          M210                  M1387   
-          M211                  M2611   
-          M212                  M1388   
-          M213                  M2613   
-          M214                  M1389   
-          M215                  M2614   
-          M216                  M1390   
-          M217                  M2615   
-          M218                  M1391   
-          M219                  M2616   
-          M220                  M1392   
-          M221                  M2617   
-          M222                  M1393   
-          M223                  M2618   
-          M224                  M1394   
-          M225                  M2619   
-          M226                  M1395   
-          M227                  M2620   
-          M228                  M1396   
-          M229                  M2621   
-          M230                  M1397   
-          M231                  M2622   
-          M232                  M1398   
-          M233                  M2623   
-          M234                  M1399   
-          M235                  M2624   
-          M236                  M1400   
-          M237                  M2625   
-          M238                  M1401   
-          M239                  M2626   
-          M240                  M1402   
-          M241                  M2627   
-          M242                  M1403   
-          M243                  M2628   
-          M244                  M1404   
-          M245                  M2629   
-          M246                  M1405   
-          M247                  M2630   
-          M248                  M1406   
-          M249                  M2631   
-          M250                  M1407   
-          M251                  M2632   
-          M252                  M1408   
-          M253                  M2633   
-          M254                  M1409   
-          M255                  M2634   
-          M256                  M1410   
-          M257                  M2635   
-          M258                  M1411   
-          M259                  M2636   
-          M260                  M1412   
-          M261                  M2637   
-          M262                  M1413   
-          M263                  M2638   
-          M264                  M1414   
-          M265                  M2639   
-          M266                  M1415   
-          M267                  M2640   
-          M268                  M1416   
-          M269                  M2641   
-          M270                  M1417   
-          M271                  M2642   
-          M272                  M1418   
-          M273                  M2643   
-          M274                  M1419   
-          M275                  M2644   
-          M276                  M1420   
-          M277                  M2645   
-          M278                  M1421   
-          M279                  M2646   
-          M280                  M1422   
-          M281                  M2647   
-          M282                  M1423   
-          M283                  M1424   
-          M359                  M1426   
-          M360                  M1578   
-          M361                  M1579   
-          M362                  M2651   
-          M363                  M1580   
-          M364                  M2653   
-          M365                  M1581   
-          M366                  M2649   
-          M367                  M1582   
-          M368                  M1583   
-          M379                  M1585   
-          M380                  M1603   
-          M381                  M1604   
-          M382                  M2664   
-          M383                  M1605   
-          M384                  M2661   
-          M385                  M1606   
-          M386                  M2659   
-          M387                  M1607   
-          M388                  M2656   
-          M389                  M1608   
-          M390                  M2670   
-          M391                  M1609   
-          M392                  M2671   
-          M393                  M1610   
-          M394                  M2672   
-          M395                  M1611   
-          M396                  M2673   
-          M397                  M1612   
-          M398                  M2674   
-          M399                  M1613   
-          M400                  M2675   
-          M401                  M1614   
-          M402                  M2676   
-          M403                  M1615   
-          M404                  M2677   
-          M405                  M1616   
-          M406                  M2678   
-          M407                  M1617   
-          M408                  M2679   
-          M409                  M1618   
-          M410                  M2680   
-          M411                  M1619   
-          M412                  M2681   
-          M413                  M1620   
-          M414                  M2682   
-          M415                  M1621   
-          M416                  M2683   
-          M417                  M1622   
-          M418                  M2684   
-          M419                  M1623   
-          M420                  M2685   
-          M421                  M1624   
-          M422                  M2686   
-          M423                  M1625   
-          M424                  M2687   
-          M425                  M1626   
-          M426                  M2688   
-          M427                  M1627   
-          M428                  M2689   
-          M429                  M1628   
-          M430                  M2690   
-          M431                  M1629   
-          M432                  M2691   
-          M433                  M1630   
-          M434                  M2692   
-          M435                  M1631   
-          M436                  M2693   
-          M437                  M1632   
-          M438                  M2694   
-          M439                  M1633   
-          M440                  M2695   
-          M441                  M1634   
-          M442                  M2696   
-          M443                  M1635   
-          M444                  M2697   
-          M445                  M1636   
-          M446                  M2698   
-          M447                  M1637   
-          M448                  M2699   
-          M449                  M1638   
-          M450                  M2700   
-          M451                  M1639   
-          M452                  M2701   
-          M453                  M1640   
-          M454                  M2702   
-          M455                  M1641   
-          M456                  M2703   
-          M457                  M1642   
-          M458                  M2704   
-          M459                  M1643   
-          M460                  M2705   
-          M461                  M1644   
-          M462                  M2706   
-          M463                  M1645   
-          M464                  M2707   
-          M465                  M1646   
-          M466                  M2708   
-          M467                  M1647   
-          M468                  M2709   
-          M469                  M1648   
-          M470                  M2710   
-          M471                  M1649   
-          M472                  M2711   
-          M473                  M1650   
-          M663                  M2024   
-          M662                  M2022   
-          M661                  M2020   
-          M660                  M2018   
-          M659                  M2016   
-          M658                  M2014   
-          M657                  M2012   
-          M656                  M2010   
-          M655                  M2008   
-          M654                  M2006   
-          M653                  M2004   
-          M652                  M2002   
-          M651                  M2000   
-          M650                  M1998   
-          M649                  M1996   
-          M648                  M1994   
-          M647                  M1992   
-          M646                  M1990   
-          M645                  M1988   
-          M644                  M1986   
-          M643                  M1984   
-          M642                  M1982   
-          M641                  M1980   
-          M640                  M1978   
-          M639                  M1976   
-          M638                  M1974   
-          M637                  M1972   
-          M636                  M1970   
-          M635                  M1968   
-          M634                  M1966   
-          M633                  M1964   
-          M632                  M1962   
-          M631                  M1960   
-          M630                  M1958   
-          M629                  M1956   
-          M628                  M1954   
-          M627                  M1952   
-          M626                  M1950   
-          M625                  M1948   
-          M624                  M1946   
-          M623                  M1944   
-          M622                  M1942   
-          M621                  M1940   
-          M620                  M1938   
-          M619                  M1936   
-          M618                  M1934   
-          M617                  M1932   
-          M616                  M1930   
-          M615                  M1928   
-          M614                  M1926   
-          M613                  M1924   
-          M612                  M1922   
-          M611                  M1920   
-          M610                  M1918   
-          M609                  M1916   
-          M608                  M1914   
-          M607                  M1912   
-          M606                  M1910   
-          M605                  M1908   
-          M604                  M1906   
-          M603                  M1904   
-          M602                  M1902   
-          M601                  M1900   
-          M600                  M1898   
-          M599                  M1896   
-          M598                  M1894   
-          M597                  M1892   
-          M596                  M1890   
-          M595                  M1888   
-          M594                  M1886   
-          M593                  M1884   
-          M592                  M1882   
-          M591                  M1880   
-          M590                  M1878   
-          M589                  M1876   
-          M588                  M1874   
-          M587                  M1872   
-          M586                  M1870   
-          M585                  M1868   
-          M584                  M1866   
-          M583                  M1864   
-          M582                  M1862   
-          M581                  M1860   
-          M580                  M1858   
-          M579                  M1856   
-          M578                  M1854   
-          M577                  M1852   
-          M576                  M1850   
-          M575                  M1848   
-          M574                  M1846   
-          M573                  M1844   
-          M572                  M1842   
-          M571                  M1840   
-          M570                  M1839   
-          M569                  M1838   
-          M768                  M1838   
-          M767                  M2090   
-          M766                  M2088   
-          M765                  M2086   
-          M764                  M2084   
-          M763                  M2082   
-          M762                  M2080   
-          M761                  M2078   
-          M760                  M2077   
-          M759                  M2076   
-          M853                  M2076   
-          M852                  M2247   
-          M851                  M2245   
-          M850                  M2243   
-          M849                  M2241   
-          M848                  M2239   
-          M847                  M2237   
-          M846                  M2235   
-          M845                  M2233   
-          M844                  M2231   
-          M843                  M2229   
-          M842                  M2227   
-          M841                  M2225   
-          M840                  M2223   
-          M839                  M2221   
-          M838                  M2219   
-          M837                  M2217   
-          M836                  M2215   
-          M835                  M2213   
-          M834                  M2211   
-          M833                  M2209   
-          M832                  M2207   
-          M831                  M2205   
-          M830                  M2203   
-          M829                  M2201   
-          M828                  M2199   
-          M827                  M2197   
-          M826                  M2195   
-          M825                  M2193   
-          M824                  M2191   
-          M823                  M2189   
-          M822                  M2187   
-          M821                  M2185   
-          M820                  M2183   
-          M819                  M2181   
-          M818                  M2179   
-          M817                  M2177   
-          M816                  M2175   
-          M815                  M2173   
-          M814                  M2171   
-          M813                  M2169   
-          M812                  M2167   
-          M811                  M2165   
-          M810                  M2163   
-          M809                  M2161   
-          M808                  M2159   
-          M807                  M2157   
-          M806                  M2155   
-          M805                  M2153   
-          M804                  M2151   
-          M803                  M2149   
-          M802                  M2147   
-          M801                  M2145   
-          M800                  M2143   
-          M799                  M2141   
-          M798                  M2139   
-          M797                  M2137   
-          M796                  M2135   
-          M795                  M2133   
-          M794                  M2131   
-          M793                  M2129   
-          M792                  M2127   
-          M791                  M2125   
-          M790                  M2123   
-          M789                  M2121   
-          M788                  M2119   
-          M787                  M2117   
-          M786                  M2115   
-          M785                  M2113   
-          M784                  M2111   
-          M783                  M2109   
-          M782                  M2107   
-          M781                  M2105   
-          M780                  M2103   
-          M779                  M2102   
-          M929                  M2779   
-          M930                  M2289   
-          M931                  M2822   
-          M932                  M2290   
-          M933                  M2820   
-          M934                  M2291   
-          M935                  M2824   
-          M936                  M2292   
-          M937                  M2825   
-          M938                  M2293   
-          M939                  M2826   
-          M940                  M2294   
-          M941                  M2827   
-          M942                  M2295   
-          M943                  M2828   
-          M944                  M2296   
-          M945                  M2829   
-          M946                  M2297   
-          M947                  M2830   
-          M948                  M2298   
-          M949                  M2831   
-          M950                  M2299   
-          M951                  M2832   
-          M952                  M2300   
-          M953                  M2833   
-          M954                  M2301   
-          M955                  M2835   
-          M1059                 M2494   
-          M1058                 M2492   
-          M1057                 M2490   
-          M1056                 M2488   
-          M1055                 M2486   
-          M1054                 M2484   
-          M1053                 M2482   
-          M1052                 M2480   
-          M1051                 M2478   
-          M1050                 M2476   
-          M1049                 M2474   
-          M1048                 M2472   
-          M1047                 M2470   
-          M1046                 M2468   
-          M1045                 M2466   
-          M1044                 M2464   
-          M1043                 M2462   
-          M1042                 M2460   
-          M1041                 M2458   
-          M1040                 M2456   
-          M1039                 M2454   
-          M1038                 M2452   
-          M1037                 M2450   
-          M1036                 M2448   
-          M1035                 M2446   
-          M1034                 M2444   
-          M1033                 M2442   
-          M1032                 M2440   
-          M1031                 M2438   
-          M1030                 M2436   
-          M1029                 M2434   
-          M1028                 M2432   
-          M1027                 M2430   
-          M1026                 M2428   
-          M1025                 M2426   
-          M1024                 M2424   
-          M1023                 M2422   
-          M1022                 M2420   
-          M1021                 M2418   
-          M1020                 M2416   
-          M1019                 M2414   
-          M1018                 M2412   
-          M1017                 M2410   
-          M1016                 M2408   
-          M1015                 M2406   
-          M1014                 M2404   
-          M1013                 M2402   
-          M1012                 M2400   
-          M1011                 M2398   
-          M1010                 M2396   
-          M1009                 M2394   
-          M1008                 M2392   
-          M1007                 M2390   
-          M1006                 M2388   
-          M1005                 M2386   
-          M1004                 M2384   
-          M1003                 M2382   
-          M1002                 M2380   
-          M1001                 M2378   
-          M1000                 M2376   
-          M999                  M2374   
-          M998                  M2372   
-          M997                  M2370   
-          M996                  M2368   
-          M995                  M2366   
-          M994                  M2364   
-          M993                  M2362   
-          M992                  M2360   
-          M991                  M2358   
-          M990                  M2356   
-          M989                  M2354   
-          M988                  M2352   
-          M987                  M2350   
-          M986                  M2348   
-          M985                  M2346   
-          M984                  M2344   
-          M983                  M2343   
-          M1060                 M2852   
-          M1061                 M2496   
-          M1062                 M2851   
-          M1063                 M2497   
-          M1064                 M2855   
-          M1065                 M2498   
-          M1066                 M2856   
-          M1067                 M2499   
-          M1068                 M2857   
-          M1069                 M2500   
-          M1070                 M2858   
-          M1071                 M2501   
-          M1072                 M2859   
-          M1073                 M2502   
-          M1074                 M2860   
-          M1075                 M2503   
-          M1076                 M2861   
-          M1077                 M2504   
-          M1078                 M2862   
-          M1079                 M2505   
-          M1080                 M2863   
-          M1081                 M2506   
-          M1082                 M2864   
-          M1083                 M2507   
-          M1084                 M2865   
-          M1085                 M2508   
-          M1086                 M2866   
-          M1087                 M2509   
-          M1088                 M2867   
-          M1089                 M2510   
-          M1090                 M2868   
-          M1091                 M2511   
-          M1092                 M2869   
-          M1093                 M2512   
-          M1094                 M2870   
-          M1095                 M2513   
-          M1096                 M2871   
-          M1097                 M2514   
-          M1098                 M2872   
-          M1099                 M2515   
-          M1100                 M2873   
-          M1101                 M2516   
-          M1102                 M2874   
-          M1103                 M2517   
-          M1104                 M2875   
-          M1105                 M2518   
-          M1106                 M2876   
-          M1107                 M2519   
-          M1108                 M2877   
-          M1109                 M2520   
-          M1110                 M2878   
-          M1111                 M2521   
-          M1112                 M2879   
-          M1113                 M2522   
-          M1114                 M2880   
-          M1115                 M2523   
-          M1116                 M2881   
-          M1117                 M2524   
-          M1118                 M2882   
-          M1119                 M2525   
-          M1120                 M2883   
-          M1121                 M2526   
-          M1122                 M2884   
-          M1123                 M2527   
-          M1124                 M2885   
-          M1125                 M2528   
-          M1126                 M2886   
-          M1127                 M2529   
-          M1128                 M2887   
-          M1129                 M2530   
-          M1130                 M2888   
-          M1131                 M2531   
-          M1132                 M2889   
-          M1133                 M2532   
-          M1134                 M2890   
-          M1135                 M2533   
-          M1136                 M2534   
-          M982                  M2342   
-          M981                  M2340   
-          M980                  M2339   
-          M979                  M2337   
-          M978                  M2336   
-          M977                  M2334   
-          M976                  M2333   
-          M975                  M2331   
-          M974                  M2330   
-          M973                  M2328   
-          M972                  M2327   
-          M971                  M2325   
-          M970                  M2324   
-          M969                  M2322   
-          M968                  M2321   
-          M967                  M2319   
-          M966                  M2318   
-          M965                  M2316   
-          M964                  M2315   
-          M963                  M2313   
-          M962                  M2312   
-          M961                  M2310   
-          M960                  M2309   
-          M959                  M2307   
-          M958                  M2306   
-          M957                  M2304   
-          M956                  M2302   
-          M854                  M2249   
-          M855                  M2781   
-          M856                  M2250   
-          M857                  M2784   
-          M858                  M2251   
-          M859                  M2785   
-          M860                  M2252   
-          M861                  M2786   
-          M862                  M2253   
-          M863                  M2787   
-          M864                  M2254   
-          M865                  M2788   
-          M866                  M2255   
-          M867                  M2789   
-          M868                  M2256   
-          M869                  M2790   
-          M870                  M2257   
-          M871                  M2791   
-          M872                  M2258   
-          M873                  M2792   
-          M874                  M2259   
-          M875                  M2793   
-          M876                  M2260   
-          M877                  M2794   
-          M878                  M2261   
-          M879                  M2795   
-          M880                  M2262   
-          M881                  M2796   
-          M882                  M2263   
-          M883                  M2797   
-          M884                  M2264   
-          M885                  M2798   
-          M886                  M2265   
-          M887                  M2799   
-          M888                  M2266   
-          M889                  M2800   
-          M890                  M2267   
-          M891                  M2801   
-          M892                  M2268   
-          M893                  M2802   
-          M894                  M2269   
-          M895                  M2803   
-          M896                  M2270   
-          M897                  M2804   
-          M898                  M2271   
-          M899                  M2805   
-          M900                  M2272   
-          M901                  M2806   
-          M902                  M2273   
-          M903                  M2807   
-          M904                  M2274   
-          M905                  M2808   
-          M906                  M2275   
-          M907                  M2809   
-          M908                  M2276   
-          M909                  M2810   
-          M910                  M2277   
-          M911                  M2811   
-          M912                  M2278   
-          M913                  M2812   
-          M914                  M2279   
-          M915                  M2813   
-          M916                  M2280   
-          M917                  M2814   
-          M918                  M2281   
-          M919                  M2815   
-          M920                  M2282   
-          M921                  M2816   
-          M922                  M2283   
-          M923                  M2817   
-          M924                  M2284   
-          M925                  M2818   
-          M926                  M2285   
-          M927                  M2286   
-          M928                  M2093   
-          M769                  M2093   
-          M770                  M2094   
-          M771                  M2774   
-          M772                  M2095   
-          M773                  M2772   
-          M774                  M2096   
-          M775                  M2770   
-          M776                  M2097   
-          M777                  M2098   
-          M778                  M2026   
-          M664                  M2026   
-          M665                  M2027   
-          M666                  M2721   
-          M667                  M2028   
-          M668                  M2719   
-          M669                  M2029   
-          M670                  M2724   
-          M671                  M2030   
-          M672                  M2725   
-          M673                  M2031   
-          M674                  M2726   
-          M675                  M2032   
-          M676                  M2727   
-          M677                  M2033   
-          M678                  M2728   
-          M679                  M2034   
-          M680                  M2729   
-          M681                  M2035   
-          M682                  M2730   
-          M683                  M2036   
-          M684                  M2731   
-          M685                  M2037   
-          M686                  M2732   
-          M687                  M2038   
-          M688                  M2733   
-          M689                  M2039   
-          M690                  M2734   
-          M691                  M2040   
-          M692                  M2735   
-          M693                  M2041   
-          M694                  M2736   
-          M695                  M2042   
-          M696                  M2737   
-          M697                  M2043   
-          M698                  M2738   
-          M699                  M2044   
-          M700                  M2739   
-          M701                  M2045   
-          M702                  M2740   
-          M703                  M2046   
-          M704                  M2741   
-          M705                  M2047   
-          M706                  M2742   
-          M707                  M2048   
-          M708                  M2743   
-          M709                  M2049   
-          M710                  M2744   
-          M711                  M2050   
-          M712                  M2745   
-          M713                  M2051   
-          M714                  M2746   
-          M715                  M2052   
-          M716                  M2747   
-          M717                  M2053   
-          M718                  M2748   
-          M719                  M2054   
-          M720                  M2749   
-          M721                  M2055   
-          M722                  M2750   
-          M723                  M2056   
-          M724                  M2751   
-          M725                  M2057   
-          M726                  M2752   
-          M727                  M2058   
-          M728                  M2753   
-          M729                  M2059   
-          M730                  M2754   
-          M731                  M2060   
-          M732                  M2755   
-          M733                  M2061   
-          M734                  M2756   
-          M735                  M2062   
-          M736                  M2757   
-          M737                  M2063   
-          M738                  M2758   
-          M739                  M2064   
-          M740                  M2759   
-          M741                  M2065   
-          M742                  M2760   
-          M743                  M2066   
-          M744                  M2761   
-          M745                  M2067   
-          M746                  M2762   
-          M747                  M2068   
-          M748                  M2763   
-          M749                  M2069   
-          M750                  M2764   
-          M751                  M2070   
-          M752                  M2765   
-          M753                  M2071   
-          M754                  M2766   
-          M755                  M2072   
-          M756                  M2767   
-          M757                  M2073   
-          M758                  M2074   
-          M568                  M1836   
-          M567                  M1834   
-          M566                  M1832   
-          M565                  M1830   
-          M564                  M1828   
-          M563                  M1826   
-          M562                  M1824   
-          M561                  M1822   
-          M560                  M1820   
-          M559                  M1818   
-          M558                  M1816   
-          M557                  M1814   
-          M556                  M1812   
-          M555                  M1810   
-          M554                  M1808   
-          M553                  M1806   
-          M552                  M1804   
-          M551                  M1802   
-          M550                  M1800   
-          M549                  M1798   
-          M548                  M1796   
-          M547                  M1794   
-          M546                  M1792   
-          M545                  M1790   
-          M544                  M1788   
-          M543                  M1786   
-          M542                  M1784   
-          M541                  M1782   
-          M540                  M1780   
-          M539                  M1778   
-          M538                  M1776   
-          M537                  M1774   
-          M536                  M1772   
-          M535                  M1770   
-          M534                  M1768   
-          M533                  M1766   
-          M532                  M1764   
-          M531                  M1762   
-          M530                  M1760   
-          M529                  M1758   
-          M528                  M1756   
-          M527                  M1754   
-          M526                  M1752   
-          M525                  M1750   
-          M524                  M1748   
-          M523                  M1746   
-          M522                  M1744   
-          M521                  M1742   
-          M520                  M1740   
-          M519                  M1738   
-          M518                  M1736   
-          M517                  M1734   
-          M516                  M1732   
-          M515                  M1730   
-          M514                  M1728   
-          M513                  M1726   
-          M512                  M1724   
-          M511                  M1722   
-          M510                  M1720   
-          M509                  M1718   
-          M508                  M1716   
-          M507                  M1714   
-          M506                  M1712   
-          M505                  M1710   
-          M504                  M1708   
-          M503                  M1706   
-          M502                  M1704   
-          M501                  M1702   
-          M500                  M1700   
-          M499                  M1698   
-          M498                  M1696   
-          M497                  M1694   
-          M496                  M1692   
-          M495                  M1690   
-          M494                  M1688   
-          M493                  M1686   
-          M492                  M1684   
-          M491                  M1682   
-          M490                  M1680   
-          M489                  M1678   
-          M488                  M1676   
-          M487                  M1674   
-          M486                  M1672   
-          M485                  M1670   
-          M484                  M1668   
-          M483                  M1666   
-          M482                  M1664   
-          M481                  M1662   
-          M480                  M1660   
-          M479                  M1658   
-          M478                  M1656   
-          M477                  M1654   
-          M476                  M1652   
-          M475                  M1651   
-          M474                  M1602   
-          M378                  M1602   
-          M377                  M1600   
-          M376                  M1598   
-          M375                  M1596   
-          M374                  M1594   
-          M373                  M1592   
-          M372                  M1590   
-          M371                  M1588   
-          M370                  M1586   
-          M369                  M1576   
-          M358                  M1575   
-          M357                  M1573   
-          M356                  M1571   
-          M355                  M1569   
-          M354                  M1567   
-          M353                  M1565   
-          M352                  M1563   
-          M351                  M1561   
-          M350                  M1559   
-          M349                  M1557   
-          M348                  M1555   
-          M347                  M1553   
-          M346                  M1551   
-          M345                  M1549   
-          M344                  M1547   
-          M343                  M1545   
-          M342                  M1543   
-          M341                  M1541   
-          M340                  M1539   
-          M339                  M1537   
-          M338                  M1535   
-          M337                  M1533   
-          M336                  M1531   
-          M335                  M1529   
-          M334                  M1527   
-          M333                  M1525   
-          M332                  M1523   
-          M331                  M1521   
-          M330                  M1519   
-          M329                  M1517   
-          M328                  M1515   
-          M327                  M1513   
-          M326                  M1511   
-          M325                  M1509   
-          M324                  M1507   
-          M323                  M1505   
-          M322                  M1503   
-          M321                  M1501   
-          M320                  M1499   
-          M319                  M1497   
-          M318                  M1495   
-          M317                  M1493   
-          M316                  M1491   
-          M315                  M1489   
-          M314                  M1487   
-          M313                  M1485   
-          M312                  M1483   
-          M311                  M1481   
-          M310                  M1479   
-          M309                  M1477   
-          M308                  M1475   
-          M307                  M1473   
-          M306                  M1471   
-          M305                  M1469   
-          M304                  M1467   
-          M303                  M1465   
-          M302                  M1463   
-          M301                  M1461   
-          M300                  M1459   
-          M299                  M1457   
-          M298                  M1455   
-          M297                  M1453   
-          M296                  M1451   
-          M295                  M1449   
-          M294                  M1447   
-          M293                  M1445   
-          M292                  M1443   
-          M291                  M1441   
-          M290                  M1439   
-          M289                  M1437   
-          M288                  M1435   
-          M287                  M1433   
-          M286                  M1431   
-          M285                  M1429   
-          M284                  M1427   
-          M182                  M1372   
-          M183                  M2596   
-          M184                  M1373   
-          M185                  M2595   
-          M186                  M1374   
-          M187                  M2599   
-          M188                  M1375   
-          M189                  M2600   
-          M190                  M1376   
-          M191                  M2601   
-          M192                  M1377   
-          M193                  M2602   
-          M194                  M1378   
-          M195                  M2603   
-          M196                  M1379   
-          M197                  M2604   
-          M198                  M1380   
-          M199                  M2605   
-          M200                  M1381   
-          M201                  M2606   
-          M202                  M1382   
-          M203                  M2607   
-          M204                  M1383   
-          M205                  M2608   
-          M206                  M1384   
-          M207                  M2609   
-          M208                  M1385   
-          M154                  M1328   
-          M153                  M1326   
-          M152                  M1324   
-          M151                  M1322   
-          M150                  M1320   
-          M149                  M1318   
-          M148                  M1316   
-          M147                  M1314   
-          M146                  M1312   
-          M145                  M1310   
-          M144                  M1308   
-          M143                  M1306   
-          M142                  M1304   
-          M141                  M1302   
-          M140                  M1300   
-          M139                  M1298   
-          M138                  M1296   
-          M137                  M1294   
-          M136                  M1292   
-          M135                  M1290   
-          M134                  M1288   
-          M133                  M1286   
-          M132                  M1284   
-          M131                  M1282   
-          M130                  M1280   
-          M129                  M1278   
-          M128                  M1276   
-          M127                  M1274   
-          M126                  M1272   
-          M125                  M1270   
-          M124                  M1268   
-          M123                  M1266   
-          M122                  M1264   
-          M121                  M1262   
-          M120                  M1260   
-          M119                  M1258   
-          M118                  M1256   
-          M117                  M1254   
-          M116                  M1252   
-          M115                  M1250   
-          M114                  M1248   
-          M113                  M1246   
-          M112                  M1244   
-          M111                  M1242   
-          M110                  M1240   
-          M109                  M1238   
-          M108                  M1236   
-          M107                  M1234   
-          M106                  M1232   
-          M105                  M1230   
-          M104                  M1228   
-          M103                  M1226   
-          M102                  M1224   
-          M101                  M1222   
-          M100                  M1220   
-          M99                   M1218   
-          M98                   M1216   
-          M97                   M1214   
-          M96                   M1212   
-          M95                   M1210   
-          M94                   M1208   
-          M93                   M1206   
-          M92                   M1204   
-          M91                   M1202   
-          M90                   M1200   
-          M89                   M1198   
-          M88                   M1196   
-          M87                   M1194   
-          M86                   M1192   
-          M85                   M1190   
-          M84                   M1188   
-          M83                   M1186   
-          M82                   M1184   
-          M81                   M1182   
-          M80                   M1180   
-          M79                   M1178   
-          M78                   M1176   
+          M1                    M541    
+          M2                    M1201   
+          M3                    M542    
+          M4                    M1202   
+          M5                    M543    
+          M6                    M1203   
+          M7                    M544    
+          M8                    M1204   
+          M9                    M545    
+          M10                   M1205   
+          M11                   M546    
+          M12                   M1206   
+          M13                   M547    
+          M14                   M1207   
+          M15                   M548    
+          M16                   M1208   
+          M17                   M549    
+          M18                   M1209   
+          M19                   M550    
+          M20                   M1210   
+          M21                   M551    
+          M22                   M1211   
+          M23                   M552    
+          M24                   M1212   
+          M25                   M553    
+          M26                   M1213   
+          M27                   M554    
+          M28                   M1214   
+          M29                   M555    
+          M30                   M1215   
+          M31                   M556    
+          M32                   M1216   
+          M33                   M557    
+          M34                   M1217   
+          M35                   M558    
+          M36                   M1218   
+          M37                   M559    
+          M38                   M1219   
+          M39                   M560    
+          M40                   M1220   
+          M41                   M561    
+          M42                   M1221   
+          M43                   M562    
+          M44                   M1222   
+          M45                   M563    
+          M46                   M1223   
+          M47                   M564    
+          M48                   M1224   
+          M49                   M565    
+          M50                   M1225   
+          M51                   M566    
+          M52                   M1226   
+          M53                   M567    
+          M54                   M1227   
+          M55                   M568    
+          M56                   M1228   
+          M57                   M569    
+          M58                   M1229   
+          M59                   M570    
+          M60                   M1230   
+          M61                   M571    
+          M62                   M1231   
+          M63                   M572    
+          M64                   M1232   
+          M65                   M573    
+          M66                   M1233   
+          M67                   M574    
+          M68                   M1234   
+          M69                   M575    
+          M70                   M1235   
+          M71                   M576    
+          M72                   M1237   
+          M152                  M728    
+          M151                  M727    
+          M150                  M726    
+          M149                  M725    
+          M148                  M724    
+          M147                  M723    
+          M146                  M722    
+          M145                  M721    
+          M161                  M1239   
+          M162                  M738    
+          M163                  M1256   
+          M164                  M739    
+          M165                  M1258   
+          M166                  M740    
+          M167                  M1259   
+          M168                  M741    
+          M169                  M1260   
+          M170                  M742    
+          M171                  M1261   
+          M172                  M743    
+          M173                  M1262   
+          M174                  M744    
+          M175                  M1263   
+          M176                  M745    
+          M177                  M1265   
+          M178                  M746    
+          M197                  M746    
+          M198                  M784    
+          M199                  M1266   
+          M200                  M785    
+          M201                  M1267   
+          M202                  M786    
+          M203                  M1268   
+          M204                  M787    
+          M205                  M1269   
+          M206                  M788    
+          M207                  M789    
+          M219                  M789    
+          M220                  M809    
+          M221                  M1274   
+          M222                  M810    
+          M223                  M1273   
+          M224                  M811    
+          M225                  M1277   
+          M226                  M812    
+          M227                  M1278   
+          M228                  M813    
+          M229                  M1279   
+          M230                  M814    
+          M231                  M1280   
+          M232                  M815    
+          M233                  M1281   
+          M234                  M816    
+          M235                  M1282   
+          M236                  M817    
+          M237                  M1283   
+          M238                  M818    
+          M239                  M1284   
+          M240                  M819    
+          M241                  M1285   
+          M242                  M820    
+          M243                  M1286   
+          M244                  M821    
+          M296                  M919    
+          M295                  M917    
+          M294                  M915    
+          M293                  M913    
+          M292                  M911    
+          M291                  M909    
+          M290                  M907    
+          M289                  M905    
+          M288                  M903    
+          M287                  M901    
+          M286                  M899    
+          M285                  M897    
+          M284                  M895    
+          M283                  M893    
+          M282                  M891    
+          M281                  M889    
+          M280                  M887    
+          M279                  M885    
+          M278                  M883    
+          M277                  M881    
+          M276                  M879    
+          M275                  M877    
+          M274                  M875    
+          M273                  M873    
+          M272                  M872    
+          M271                  M871    
+          M333                  M871    
+          M332                  M1306   
+          M331                  M950    
+          M330                  M948    
+          M329                  M946    
+          M328                  M944    
+          M327                  M942    
+          M326                  M940    
+          M325                  M938    
+          M324                  M937    
+          M323                  M936    
+          M362                  M936    
+          M361                  M1316   
+          M360                  M987    
+          M359                  M985    
+          M358                  M983    
+          M357                  M981    
+          M356                  M979    
+          M355                  M977    
+          M354                  M975    
+          M353                  M973    
+          M352                  M971    
+          M351                  M969    
+          M350                  M967    
+          M349                  M965    
+          M348                  M963    
+          M347                  M961    
+          M346                  M959    
+          M345                  M958    
+          M381                  M1327   
+          M382                  M1000   
+          M383                  M1001   
+          M384                  M1002   
+          M385                  M1003   
+          M386                  M1004   
+          M387                  M1005   
+          M388                  M1006   
+          M468                  M1157   
+          M467                  M1155   
+          M466                  M1153   
+          M465                  M1151   
+          M464                  M1149   
+          M463                  M1147   
+          M462                  M1145   
+          M461                  M1143   
+          M460                  M1141   
+          M459                  M1139   
+          M458                  M1137   
+          M457                  M1135   
+          M456                  M1133   
+          M455                  M1131   
+          M454                  M1129   
+          M453                  M1127   
+          M452                  M1125   
+          M451                  M1123   
+          M450                  M1121   
+          M449                  M1119   
+          M448                  M1117   
+          M447                  M1115   
+          M446                  M1113   
+          M445                  M1111   
+          M444                  M1109   
+          M443                  M1107   
+          M442                  M1105   
+          M441                  M1103   
+          M440                  M1101   
+          M439                  M1099   
+          M438                  M1097   
+          M437                  M1095   
+          M436                  M1093   
+          M435                  M1091   
+          M434                  M1089   
+          M433                  M1087   
+          M432                  M1085   
+          M431                  M1083   
+          M430                  M1081   
+          M429                  M1079   
+          M428                  M1077   
+          M427                  M1075   
+          M426                  M1073   
+          M425                  M1071   
+          M424                  M1069   
+          M423                  M1067   
+          M422                  M1065   
+          M421                  M1063   
+          M420                  M1061   
+          M419                  M1059   
+          M418                  M1057   
+          M417                  M1055   
+          M416                  M1053   
+          M415                  M1051   
+          M414                  M1049   
+          M413                  M1047   
+          M412                  M1045   
+          M411                  M1043   
+          M410                  M1041   
+          M409                  M1039   
+          M408                  M1037   
+          M407                  M1035   
+          M406                  M1033   
+          M405                  M1031   
+          M404                  M1029   
+          M403                  M1027   
+          M402                  M1025   
+          M401                  M1023   
+          M400                  M1021   
+          M399                  M1019   
+          M398                  M1017   
+          M397                  M1016   
+          M469                  M1343   
+          M470                  M1159   
+          M471                  M1342   
+          M472                  M1160   
+          M473                  M1346   
+          M474                  M1161   
+          M475                  M1347   
+          M476                  M1162   
+          M477                  M1348   
+          M478                  M1163   
+          M479                  M1349   
+          M480                  M1164   
+          M481                  M1350   
+          M482                  M1165   
+          M483                  M1351   
+          M484                  M1166   
+          M485                  M1352   
+          M486                  M1167   
+          M487                  M1353   
+          M488                  M1168   
+          M489                  M1354   
+          M490                  M1169   
+          M491                  M1355   
+          M492                  M1170   
+          M493                  M1356   
+          M494                  M1171   
+          M495                  M1357   
+          M496                  M1172   
+          M497                  M1358   
+          M498                  M1173   
+          M499                  M1359   
+          M500                  M1174   
+          M501                  M1360   
+          M502                  M1175   
+          M503                  M1361   
+          M504                  M1176   
+          M505                  M1362   
+          M506                  M1177   
+          M507                  M1363   
+          M508                  M1178   
+          M509                  M1364   
+          M510                  M1179   
+          M511                  M1365   
+          M512                  M1180   
+          M513                  M1366   
+          M514                  M1181   
+          M515                  M1367   
+          M516                  M1182   
+          M517                  M1368   
+          M518                  M1183   
+          M519                  M1369   
+          M520                  M1184   
+          M521                  M1370   
+          M522                  M1185   
+          M523                  M1371   
+          M524                  M1186   
+          M525                  M1372   
+          M526                  M1187   
+          M527                  M1373   
+          M528                  M1188   
+          M529                  M1374   
+          M530                  M1189   
+          M531                  M1375   
+          M532                  M1190   
+          M533                  M1376   
+          M534                  M1191   
+          M535                  M1377   
+          M536                  M1192   
+          M537                  M1378   
+          M538                  M1193   
+          M539                  M1379   
+          M540                  M1194   
+          M396                  M1015   
+          M395                  M1014   
+          M394                  M1013   
+          M393                  M1012   
+          M392                  M1011   
+          M391                  M1010   
+          M390                  M1009   
+          M389                  M1007   
+          M363                  M990    
+          M364                  M1317   
+          M365                  M991    
+          M366                  M1318   
+          M367                  M992    
+          M368                  M1319   
+          M369                  M993    
+          M370                  M1320   
+          M371                  M994    
+          M372                  M1321   
+          M373                  M995    
+          M374                  M1322   
+          M375                  M996    
+          M376                  M1323   
+          M377                  M997    
+          M378                  M1324   
+          M379                  M998    
+          M380                  M952    
+          M334                  M952    
+          M335                  M953    
+          M336                  M1310   
+          M337                  M954    
+          M338                  M1312   
+          M339                  M955    
+          M340                  M1313   
+          M341                  M956    
+          M342                  M1314   
+          M343                  M957    
+          M344                  M921    
+          M297                  M921    
+          M298                  M922    
+          M299                  M1293   
+          M300                  M923    
+          M301                  M1292   
+          M302                  M924    
+          M303                  M1296   
+          M304                  M925    
+          M305                  M1297   
+          M306                  M926    
+          M307                  M1298   
+          M308                  M927    
+          M309                  M1299   
+          M310                  M928    
+          M311                  M1300   
+          M312                  M929    
+          M313                  M1301   
+          M314                  M930    
+          M315                  M1302   
+          M316                  M931    
+          M317                  M1303   
+          M318                  M932    
+          M319                  M1304   
+          M320                  M933    
+          M321                  M1305   
+          M322                  M934    
+          M270                  M869    
+          M269                  M867    
+          M268                  M865    
+          M267                  M863    
+          M266                  M861    
+          M265                  M859    
+          M264                  M857    
+          M263                  M855    
+          M262                  M853    
+          M261                  M851    
+          M260                  M849    
+          M259                  M847    
+          M258                  M845    
+          M257                  M843    
+          M256                  M841    
+          M255                  M839    
+          M254                  M837    
+          M253                  M835    
+          M252                  M833    
+          M251                  M831    
+          M250                  M829    
+          M249                  M827    
+          M248                  M825    
+          M247                  M823    
+          M246                  M822    
+          M245                  M808    
+          M218                  M808    
+          M217                  M806    
+          M216                  M804    
+          M215                  M802    
+          M214                  M800    
+          M213                  M798    
+          M212                  M796    
+          M211                  M794    
+          M210                  M792    
+          M209                  M790    
+          M208                  M782    
+          M196                  M781    
+          M195                  M779    
+          M194                  M777    
+          M193                  M775    
+          M192                  M773    
+          M191                  M771    
+          M190                  M769    
+          M189                  M767    
+          M188                  M765    
+          M187                  M763    
+          M186                  M761    
+          M185                  M759    
+          M184                  M757    
+          M183                  M755    
+          M182                  M753    
+          M181                  M751    
+          M180                  M749    
+          M179                  M747    
+          M153                  M729    
+          M154                  M730    
+          M155                  M731    
+          M156                  M732    
+          M157                  M733    
+          M158                  M734    
+          M159                  M735    
+          M160                  M736    
+          M144                  M719    
+          M143                  M717    
+          M142                  M715    
+          M141                  M713    
+          M140                  M711    
+          M139                  M709    
+          M138                  M707    
+          M137                  M705    
+          M136                  M703    
+          M135                  M701    
+          M134                  M699    
+          M133                  M697    
+          M132                  M695    
+          M131                  M693    
+          M130                  M691    
+          M129                  M689    
+          M128                  M687    
+          M127                  M685    
+          M126                  M683    
+          M125                  M681    
+          M124                  M679    
+          M123                  M677    
+          M122                  M675    
+          M121                  M673    
+          M120                  M671    
+          M119                  M669    
+          M118                  M667    
+          M117                  M665    
+          M116                  M663    
+          M115                  M661    
+          M114                  M659    
+          M113                  M657    
+          M112                  M655    
+          M111                  M653    
+          M110                  M651    
+          M109                  M649    
+          M108                  M647    
+          M107                  M645    
+          M106                  M643    
+          M105                  M641    
+          M104                  M639    
+          M103                  M637    
+          M102                  M635    
+          M101                  M633    
+          M100                  M631    
+          M99                   M629    
+          M98                   M627    
+          M97                   M625    
+          M96                   M623    
+          M95                   M621    
+          M94                   M619    
+          M93                   M617    
+          M92                   M615    
+          M91                   M613    
+          M90                   M611    
+          M89                   M609    
+          M88                   M607    
+          M87                   M605    
+          M86                   M603    
+          M85                   M601    
+          M84                   M599    
+          M83                   M597    
+          M82                   M595    
+          M81                   M593    
+          M80                   M591    
+          M79                   M589    
+          M78                   M587    
+          M77                   M585    
+          M76                   M583    
+          M75                   M581    
+          M74                   M579    
+          M73                   M577    
           M1      
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.02      0.00      0.02
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.03      0.00      0.03
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
 
 ------------ MAILLAGE .9000025 - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 12.06.00 CONCEPT .9000025 CALCULE LE 27/12/2016 A 14:33:40 DE TYPE        
+ASTER 12.06.00 CONCEPT .9000025 CALCULE LE 27/12/2016 A 15:15:31 DE TYPE        
 MAILLAGE_SDASTER                                                                
 
-NOMBRE DE NOEUDS                        6485
+NOMBRE DE NOEUDS                        2474
 
-NOMBRE DE MAILLES                      12968
-                              SEG2                 1136
-                              TRIA3               11832
+NOMBRE DE MAILLES                       4946
+                              SEG2                  540
+                              TRIA3                4406
 
 NOMBRE DE GROUPES DE NOEUDS                4
-                              Group_Of_All_Nodes                6485
+                              Group_Of_All_Nodes                2474
                               MyPoint                              1
-                              MySect                            6485
-                              MyBorder                          1136
+                              MySect                            2474
+                              MyBorder                           540
 
 NOMBRE DE GROUPES DE MAILLES               4
-                              Group_Of_All_Edges                1136
-                              MyBorder                          1136
-                              Group_Of_All_Faces               11832
-                              MySect                           11832
+                              Group_Of_All_Edges                 540
+                              MyBorder                           540
+                              Group_Of_All_Faces                4406
+                              MySect                            4406
 
 --------------------------------------------------------------------------------
 
 
-Sur les 12968 mailles du maillage .9000025, on a demandé l'affectation de 12968, on a pu en affecter 12968
+Sur les 4946 mailles du maillage .9000025, on a demandé l'affectation de 4946, on a pu en affecter 4946
  Modélisation     Type maille  Élément fini     Nombre
- PLAN             SEG2         THPLSE2          1136
- PLAN             TRIA3        THPLTR3          11832
+ PLAN             SEG2         THPLSE2          540
+ PLAN             TRIA3        THPLTR3          4406
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
    
    !-------------------------------------------------------------------------------!
@@ -1920,7 +1324,7 @@ Sur les 12968 mailles du maillage .9000025, on a demandé l'affectation de 12968
    !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
    !  Grandeur : SOUR_R   Composante non reconnue : SOUR                           !
    !                                                                               !
-   !  Ce problème concerne 1136 mailles                                            !
+   !  Ce problème concerne 540 mailles                                             !
    !  Les premières mailles concernées sont imprimées ci-dessous.                  !
    !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
    !                                                                               !
@@ -1934,49 +1338,49 @@ Sur les 12968 mailles du maillage .9000025, on a demandé l'affectation de 12968
   Maille : M3. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
   Maille : M4. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
   Maille : M5. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.04      0.00      0.05
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.06      0.00      0.06
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.02      0.00      0.04
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.02      0.00      0.04
  --- RENUMEROTATION DES NOEUDS DU MODELE (RCMK) :
     --- NOMBRE DE COMPOSANTES CONNEXES DU MODELE :                    1
     --- HAUTEUR DE COLONNE MOYENNE (EN NOEUDS)
          (EN NE TENANT COMPTE QUE DES NOEUDS PHYSIQUES)
-         AVANT RENUMEROTATION: 8.568D+02
-         APRES RENUMEROTATION: 2.307D+01
+         AVANT RENUMEROTATION: 3.770D+02
+         APRES RENUMEROTATION: 1.798D+01
 
-Le système linéaire à résoudre a 6485 degrés de liberté:
-   - 6485 sont des degrés de liberté physiques
-     (ils sont portés par 6485 noeuds du maillage)
+Le système linéaire à résoudre a 2474 degrés de liberté:
+   - 2474 sont des degrés de liberté physiques
+     (ils sont portés par 2474 noeuds du maillage)
    - 0 sont les couples de paramètres de Lagrange associés
      aux 0 relations linéaires dualisées.
 
-La matrice est de taille 6485 équations.
-Elle contient 24801 termes non nuls si elle est symétrique et 43117 termes non nuls si elle n'est pas symétrique (le nombre de
-termes non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
-Soit un taux de remplissage de   0.103 %.
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.02      0.00      0.03
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
+La matrice est de taille 2474 équations.
+Elle contient 9353 termes non nuls si elle est symétrique et 16232 termes non nuls si elle n'est pas symétrique (le nombre de termes
+non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
+Soit un taux de remplissage de   0.265 %.
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.03
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
 
-Le système linéaire à résoudre a 6487 degrés de liberté:
-   - 6485 sont des degrés de liberté physiques
-     (ils sont portés par 6485 noeuds du maillage)
+Le système linéaire à résoudre a 2476 degrés de liberté:
+   - 2474 sont des degrés de liberté physiques
+     (ils sont portés par 2474 noeuds du maillage)
    - 2 sont les couples de paramètres de Lagrange associés
      aux 1 relations linéaires dualisées.
 
-La matrice est de taille 6487 équations.
-Elle contient 37774 termes non nuls si elle est symétrique et 69061 termes non nuls si elle n'est pas symétrique (le nombre de
+La matrice est de taille 2476 équations.
+Elle contient 14304 termes non nuls si elle est symétrique et 26132 termes non nuls si elle n'est pas symétrique (le nombre de
 termes non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
-Soit un taux de remplissage de   0.164 %.
+Soit un taux de remplissage de   0.426 %.
 
  Il n'y a pas d'état initial défini. On prend un état initial nul.
 
   Archivage des champs
     Champ stocké <TEMP> à l'instant  0.000000000000e+00 pour le numéro d'ordre 0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   6.663E+01
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):     66.65      0.13     67.45
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.08      0.00      0.08
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.05      0.01      0.04
-  # Mémoire (Mo) :   520.95 /   357.51 /   210.20 /    30.99 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin commande No : 0003   user+syst:       71.36s (syst:        0.25s, elaps:       72.53s)
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   3.540E+00
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      3.52      0.00      3.58
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.03      0.00      0.07
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.02
+  # Mémoire (Mo) :   372.67 /   347.89 /    62.47 /    29.42 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0003   user+syst:        5.14s (syst:        0.05s, elaps:        6.08s)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -1997,7 +1401,7 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   6.663E+01
    !     Les alarmes que vous avez choisies d'ignorer sont précédées de (*). !
    !     Nombre d'occurrences pour chacune des alarmes :                     !
    !            CALCULEL_40          émise    4 fois                         !
-   !            CHARGES2_87          émise 4544 fois                         !
+   !            CHARGES2_87          émise 2160 fois                         !
    !            MODELISA7_9          émise    1 fois                         !
    !            SUPERVIS_1           émise    1 fois                         !
    !            SUPERVIS_9           émise    1 fois                         !
@@ -2007,9 +1411,9 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   6.663E+01
  Concepts de la base: G
     Nom       Type                 Taille (Mo)         Nombre      Nombre de
                                                      d'objets       segments
-    TOTAL                                22.66            176            266
+    TOTAL                                21.72            176            266
   
-    mesh       MAILLAGE_SDASTER           1.52             35             64
+    mesh       MAILLAGE_SDASTER           0.58             35             64
     section    TABLE_SDASTER              0.01             96             96
     &FOZERO                               0.00              2              2
     &&_NUM_C                              0.00              1              1
@@ -2027,13 +1431,13 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   6.663E+01
 
 
      Nom de la base                          :  GLOBALE
-     Nombre d'enregistrements utilisés       :  34
+     Nombre d'enregistrements utilisés       :  33
      Nombre d'enregistrements maximum        :  62914
      Longueur d'enregistrement (octets)      :  819200
      Nombre total d'accès en lecture         :  7
      Volume des accès en lecture             :          5.47 Mo.
-     Nombre total d'accès en écriture        :  48
-     Volume des accès en écriture            :         37.50 Mo.
+     Nombre total d'accès en écriture        :  47
+     Volume des accès en écriture            :         36.72 Mo.
      Nombre d'identificateurs utilisés       :  1273
      Taille maximum du répertoire            :  2000
      Pourcentage d'utilisation du répertoire :  63 %
@@ -2054,7 +1458,7 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   6.663E+01
  <FIN> Arrêt normal dans "FIN".
 
  La mémoire demandée au lancement est surestimée, elle est de 4800.00 Mo.
- Le pic mémoire utilisée est de 520.95 Mo.
+ Le pic mémoire utilisée est de 372.67 Mo.
 
 
 
@@ -2073,53 +1477,53 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   6.663E+01
  <I>       FERMETURE DES BASES EFFECTUEE
   
    STATISTIQUES CONCERNANT L'ALLOCATION DYNAMIQUE :
-     TAILLE CUMULEE MAXIMUM            :                  210  Mo.
-     TAILLE CUMULEE LIBEREE            :                  192  Mo.
-     NOMBRE TOTAL D'ALLOCATIONS        :              1520916
-     NOMBRE TOTAL DE LIBERATIONS       :              1520896
+     TAILLE CUMULEE MAXIMUM            :                   62  Mo.
+     TAILLE CUMULEE LIBEREE            :                   51  Mo.
+     NOMBRE TOTAL D'ALLOCATIONS        :               382883
+     NOMBRE TOTAL DE LIBERATIONS       :               382863
      APPELS AU MECANISME DE LIBERATION :                    0
      TAILLE MEMOIRE CUMULEE RECUPEREE  :                    0  Mo.
      VOLUME DES LECTURES               :                    0  Mo.
      VOLUME DES ECRITURES              :                    0  Mo.
   
-   MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :      30.99 Mo
+   MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :      29.42 Mo
      - IMPOSE DE NOMBREUX ACCES DISQUE
      - RALENTIT LA VITESSE D'EXECUTION
-   MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :     210.20 Mo
+   MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :      62.47 Mo
      - LIMITE LES ACCES DISQUE
      - AMELIORE LA VITESSE D'EXECUTION
-   MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS     :     520.95 Mo
+   MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS     :     372.67 Mo
      - COMPREND LA MEMOIRE CONSOMMEE PAR  JEVEUX, 
        LE SUPERVISEUR PYTHON, LES LIBRAIRIES EXTERNES
   
- <I>       FIN D'EXECUTION LE : MA-27-DECE-2016 14:34:49
+ <I>       FIN D'EXECUTION LE : MA-27-DECE-2016 15:15:35
 
 
   <I> Informations sur les temps d'exécution
-      Temps cpu total                        72.01 s
-      Temps cpu user total                   71.62 s
-      Temps cpu systeme total                 0.39 s
-      Temps cpu restant                 35995427.99 s
+      Temps cpu total                         5.66 s
+      Temps cpu user total                    5.52 s
+      Temps cpu systeme total                 0.14 s
+      Temps cpu restant                 35995494.34 s
 
 
   La signature de la base sauvegardée est (à l'adresse 0) :
-    4e1bc0c618eb74fba9b289976a3e55805c790e00
+    991b1025f83ba9a2f9c2dc3be9ebca45acba8f90
 
  ********************************************************************************
  * COMMAND                  :       USER :     SYSTEM :   USER+SYS :    ELAPSED *
  ********************************************************************************
- * init (jdc)               :      71.62 :       0.39 :      72.01 :      73.28 *
+ * init (jdc)               :       5.52 :       0.14 :       5.66 :       6.81 *
  *  . compile               :       0.00 :       0.00 :       0.00 :       0.00 *
- *  . exec_compile          :      71.33 :       0.35 :      71.68 :      72.95 *
- * DEBUT                    :       0.01 :       0.05 :       0.06 :       0.07 *
- * LIRE_MAILLAGE            :       0.08 :       0.01 :       0.09 :       0.10 *
- * MACR_CARA_POUTRE         :      71.11 :       0.25 :      71.36 :      72.53 *
- * FIN                      :       0.03 :       0.04 :       0.07 :       0.09 *
- *  . part Superviseur      :       0.61 :       0.09 :       0.70 :       0.91 *
- *  . part Fortran          :      71.00 :       0.30 :      71.30 :      72.37 *
+ *  . exec_compile          :       5.25 :       0.12 :       5.37 :       6.51 *
+ * DEBUT                    :       0.03 :       0.02 :       0.05 :       0.11 *
+ * LIRE_MAILLAGE            :       0.03 :       0.01 :       0.04 :       0.08 *
+ * MACR_CARA_POUTRE         :       5.09 :       0.05 :       5.14 :       6.08 *
+ * FIN                      :       0.02 :       0.03 :       0.05 :       0.12 *
+ *  . part Superviseur      :       0.60 :       0.06 :       0.66 :       0.89 *
+ *  . part Fortran          :       4.92 :       0.08 :       5.00 :       5.91 *
  ********************************************************************************
- * TOTAL_JOB                :      71.62 :       0.39 :      72.01 :      73.28 *
+ * TOTAL_JOB                :       5.52 :       0.14 :       5.66 :       6.81 *
  ********************************************************************************
 
 --- Fin de l'exécution
-EXECUTION_CODE_ASTER_EXIT_30874=0
+EXECUTION_CODE_ASTER_EXIT_8272=0
