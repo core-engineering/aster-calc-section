@@ -1,7 +1,7 @@
 # aster-calc-section
 
 ## Description
-This collection of scripts enables the calculation of section properties with [aster](www.code-aster.org) code with the help of [salome meca](www.code-aster.org). Now, it works with I beam geometry.
+This collection of scripts enables the calculation of section properties with [aster](https://www.code-aster.org) code with the help of [salome meca](www.code-aster.org). Now, it works with I beam geometry.
 - File Manager.py : the main python script reads input file and create communication temporary file. Then, geometry generation and mesh generation are called with salome meca. Finally, code aster is launched with the command MACR_CARA_POUTRE.
 - GenPro.py : salome python script for the geometry and the mesh
 - SectionAuto.comm : command file for code aster
@@ -18,8 +18,8 @@ This collection of scripts enables the calculation of section properties with [a
 - Try to use this database directly in code aster with AFFE_CARA_ELEM.
 
 ## References
-- [U4.42.02](www.code-aster.org/doc/v12/fr/man_u/u4/u4.42.02.pdf)
-- [R3.08.03](www.code-aster.org/doc/v12/fr/man_r/r3/r3.08.03.pdf)
+- [U4.42.02](https://www.code-aster.org/doc/v12/fr/man_u/u4/u4.42.02.pdf)
+- [R3.08.03](https://www.code-aster.org/doc/v12/fr/man_r/r3/r3.08.03.pdf)
 
 ## Philosophy
 I would like to create some tools to facilitate the use of aster code with beam elements.
