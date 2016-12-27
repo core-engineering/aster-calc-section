@@ -1,0 +1,11 @@
+P actions make_etude
+P mode interactif
+P rep_trav /tmp/camille-camille-VirtualBox-interactif.11377
+P version /opt/aster/12.6/share/aster
+A memjeveux 600.0
+A tpmax 35996400.0
+F comm /media/Calculs/aster-calc-section/SectionAuto.comm D  1
+F mmed /media/Calculs/aster-calc-section/SectionAuto.med D  20
+F mess /media/Calculs/aster-calc-section/SectionAuto.mess R  6
+F resu /media/Calculs/aster-calc-section/SectionAuto.resu R  8
+F rmed /media/Calculs/aster-calc-section/SectionAuto.rmed R  80
