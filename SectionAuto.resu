@@ -6,7 +6,7 @@
                      révision 77d3379d51e8 - branche 'v12'                      
                          Copyright EDF R&D 1991 - 2016                          
                                                                                 
-                    Exécution du : Tue Dec 27 14:28:16 2016                     
+                    Exécution du : Tue Dec 27 14:33:36 2016                     
                      Nom de la machine : camille-VirtualBox                     
                               Architecture : 64bit                              
                           Type de processeur : x86_64                           
@@ -145,7 +145,7 @@
    !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
    !  Grandeur : SOUR_R   Composante non reconnue : SOUR                           !
    !                                                                               !
-   !  Ce problème concerne 1304 mailles                                            !
+   !  Ce problème concerne 1136 mailles                                            !
    !  Les premières mailles concernées sont imprimées ci-dessous.                  !
    !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
    !                                                                               !
@@ -238,7 +238,7 @@
    !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
    !  Grandeur : SOUR_F   Composante non reconnue : SOUR                           !
    !                                                                               !
-   !  Ce problème concerne 1304 mailles                                            !
+   !  Ce problème concerne 1136 mailles                                            !
    !  Les premières mailles concernées sont imprimées ci-dessous.                  !
    !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
    !                                                                               !
@@ -331,7 +331,7 @@
    !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
    !  Grandeur : SOUR_F   Composante non reconnue : SOUR                           !
    !                                                                               !
-   !  Ce problème concerne 1304 mailles                                            !
+   !  Ce problème concerne 1136 mailles                                            !
    !  Les premières mailles concernées sont imprimées ci-dessous.                  !
    !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
    !                                                                               !
@@ -444,7 +444,7 @@
    !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
    !  Grandeur : SOUR_R   Composante non reconnue : SOUR                           !
    !                                                                               !
-   !  Ce problème concerne 1304 mailles                                            !
+   !  Ce problème concerne 1136 mailles                                            !
    !  Les premières mailles concernées sont imprimées ci-dessous.                  !
    !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
    !                                                                               !
@@ -455,33 +455,33 @@
    
 #
 #--------------------------------------------------------------------------------
-##ASTER 12.06.00 CONCEPT section CALCULE LE 27/12/2016 A 14:29:23 DE TYPE         
+##ASTER 12.06.00 CONCEPT section CALCULE LE 27/12/2016 A 14:34:48 DE TYPE         
 #TABLE_SDASTER                                                                   
 LIEU                     ENTITE   A_M          CDG_Y_M      CDG_Z_M      IY_G_M       IZ_G_M       IYZ_G_M      Y_MAX        Z_MAX        Y_MIN        Z_MIN        R_MAX        A            CDG_Y        CDG_Z        IY_G         IZ_G         IYZ_G        IY           IZ           ALPHA        Y_P          Z_P          IY_P         IZ_P         IYZ_P        JX           AY           AZ           EY           EZ           PCTY         PCTZ         JG           KY           KZ           IYR2_G       IZR2_G       IYR2         IZR2         IYR2_P       IZR2_P       RY           RZ           RT          
-.9000003                 TOUT      9.45870E+03  3.71166E-16 -2.05680E-15  1.64489E+08  4.95911E+07  1.39060E-08  1.50500E+02  1.50000E+02 -1.50500E+02 -1.50000E+02  2.12486E+02  9.45870E+03  3.71166E-16 -2.05680E-15  1.64489E+08  4.95911E+07  1.39060E-08  4.95911E+07  1.64489E+08  9.00000E+01  0.00000E+00  0.00000E+00  1.64489E+08  4.95911E+07  1.39060E-08  4.90014E+05  4.01314E+00  1.54592E+00 -2.89187E-06 -3.16212E-06  3.16212E-06 -2.89187E-06  1.01995E+12  0.00000E+00  0.00000E+00 -5.42476E-02  5.40012E-02 -5.40012E-02 -5.42476E-02 -5.42487E-02  5.40013E-02  1.50500E+02  1.50000E+02  2.07065E+01
+.9000003                 TOUT      1.33486E+04  6.29317E-15 -6.29816E-15  2.76956E+08  7.43604E+07  1.29618E-08  1.65000E+02  1.50000E+02 -1.65000E+02 -1.50000E+02  2.22991E+02  1.33486E+04  6.29317E-15 -6.29816E-15  2.76956E+08  7.43604E+07  1.29618E-08  7.43604E+07  2.76956E+08  9.00000E+01  0.00000E+00  0.00000E+00  2.76956E+08  7.43604E+07  1.29618E-08  1.27821E+06  4.32558E+00  1.48907E+00  4.20099E-06 -1.27373E-05  1.27373E-05  4.20099E-06  1.79021E+12  0.00000E+00  0.00000E+00 -2.40557E-01  2.53442E-01 -2.53442E-01 -2.40557E-01 -2.40562E-01  2.53445E-01  1.65000E+02  1.50000E+02  2.54544E+01
 
  <I> <FIN> FERMETURE DE LA BASE "GLOBALE" EFFECTUEE.
 
  <FIN> Arrêt normal dans "FIN".
  <I> <FIN> ARRET NORMAL DANS "FIN" PAR APPEL A "JEFINI".
   
- <I> <FIN> MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :                      30.92 Mo
- <I> <FIN> MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :                     210.04 Mo
- <I> <FIN> MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS LORS DE L'EXECUTION :     520.90 Mo
+ <I> <FIN> MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :                      30.99 Mo
+ <I> <FIN> MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :                     210.20 Mo
+ <I> <FIN> MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS LORS DE L'EXECUTION :     520.95 Mo
 
  ********************************************************************************
  * COMMAND                  :       USER :     SYSTEM :   USER+SYS :    ELAPSED *
  ********************************************************************************
- * init (jdc)               :      65.84 :       0.24 :      66.08 :      66.84 *
+ * init (jdc)               :      71.62 :       0.39 :      72.01 :      73.28 *
  *  . compile               :       0.00 :       0.00 :       0.00 :       0.00 *
- *  . exec_compile          :      65.57 :       0.23 :      65.80 :      66.55 *
- * DEBUT                    :       0.04 :       0.03 :       0.07 :       0.08 *
- * LIRE_MAILLAGE            :       0.08 :       0.00 :       0.08 :       0.08 *
- * MACR_CARA_POUTRE         :      65.34 :       0.13 :      65.47 :      66.15 *
- * FIN                      :       0.04 :       0.06 :       0.10 :       0.12 *
- *  . part Superviseur      :       0.61 :       0.06 :       0.67 :       0.71 *
- *  . part Fortran          :      65.23 :       0.18 :      65.41 :      66.13 *
+ *  . exec_compile          :      71.33 :       0.35 :      71.68 :      72.95 *
+ * DEBUT                    :       0.01 :       0.05 :       0.06 :       0.07 *
+ * LIRE_MAILLAGE            :       0.08 :       0.01 :       0.09 :       0.10 *
+ * MACR_CARA_POUTRE         :      71.11 :       0.25 :      71.36 :      72.53 *
+ * FIN                      :       0.03 :       0.04 :       0.07 :       0.09 *
+ *  . part Superviseur      :       0.61 :       0.09 :       0.70 :       0.91 *
+ *  . part Fortran          :      71.00 :       0.30 :      71.30 :      72.37 *
  ********************************************************************************
- * TOTAL_JOB                :      65.84 :       0.24 :      66.08 :      66.84 *
+ * TOTAL_JOB                :      71.62 :       0.39 :      72.01 :      73.28 *
  ********************************************************************************
 

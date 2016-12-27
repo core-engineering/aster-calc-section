@@ -1,7 +1,7 @@
 # aster-calc-section
 
 ## Description
-This collection of scripts enables the calculation of section properties with [aster](https://www.code-aster.org) code with the help of [salome meca](www.code-aster.org). Now, it works with I beam geometry.
+This collection of scripts enables the calculation of section properties with [aster](https://www.code-aster.org/) code with the help of [salome meca](https://www.code-aster.org/). Now, it works with I beam geometry.
 - File Manager.py : the main python script reads input file and create communication temporary file. Then, geometry generation and mesh generation are called with salome meca. Finally, code aster is launched with the command MACR_CARA_POUTRE.
 - GenPro.py : salome python script for the geometry and the mesh
 - SectionAuto.comm : command file for code aster
