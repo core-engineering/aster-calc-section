@@ -1,0 +1,460 @@
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.med' overwrites 'fort.20'
+
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<INFO> Parameters : memory 4800 MB - time limit 35996400 s
+
+ 
+ ---------------------------------------------------------------------------------
+                                            cpu     system    cpu+sys    elapsed
+ ---------------------------------------------------------------------------------
+   Preparation of environment              0.00       0.00       0.00       0.00
+   Copying datas                           0.00       0.01       0.01       0.03
+ ---------------------------------------------------------------------------------
+   Total                                   0.03       0.03       0.06       0.17
+ ---------------------------------------------------------------------------------
+
+as_run 1.13.8
+
+------------------------------------------------------------
+--- DIAGNOSTIC JOB : <F>_COPY_ERROR
+------------------------------------------------------------
+
+
+EXIT_CODE=4
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+
+--------------------------------------------------------------------------------
+ Code_Aster execution
+
+<INFO> prepare environment in /tmp/camille-camille-VirtualBox-interactif.11377
+
+--------------------------------------------------------------------------------
+ Copying datas
+
+
+<A>_COPY_DATA      '/media/Calculs/aster-calc-section/SectionAuto.comm' overwrites 'fort.1.1'
+
+copying .../aster-calc-section/SectionAuto.comm...                      [  OK  ]
+copying .../aster-calc-section/SectionAuto.med...                       [FAILED]
+Exit code : 256
+cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+
+<E>_COPY_ERROR     error during copying /media/Calculs/aster-calc-section/SectionAuto.med to fort.20
+message : cp: cannot stat '/media/Calculs/aster-calc-section/SectionAuto.med': No such file or directory
+
+

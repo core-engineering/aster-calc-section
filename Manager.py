@@ -10,7 +10,7 @@
  ######  ########    ##     #######  ##
 import pandas as pd
 from subprocess import Popen
-SALOME_ROOT='/home/camille/salome_meca/appli_V2016/salome/' # Salome directory
+SALOME_ROOT='/home/camille/salome_meca/appli_V2016/salome' # Salome directory
 ASTER_ROOT='/opt/aster/bin/' # Aster directory
 WORKING_DIR='/media/Calculs/aster-calc-section/' # Working directory
 INPUT_FILE='SectionAuto.input' # Filename of the input file
@@ -18,7 +18,7 @@ OUTPUT_FILE='SectionAuto.output' # Filename of the output file
 TEMP_FILE='Temp.input' # Filename of the temp file (from input to processing)
 PROC_FILE='GenPro.py' # Filename of the geometry and meshing script
 EXPORT_FILE='SectionAuto.export' # Filename of aster settings
-HEADER='NAME,LIEU,A,IY,IZ,AY,AZ,EY,EZ,JX,JG,IYR2,IZR2,RY,RZ,RT' # Header of the output file
+HEADER='NAME,A_M,CDG_Y_M,CDG_Z_M,IY_G_M,IZ_G_M,IYZ_G_M,A,CDG_Y,CDG_Z,IY_G,IZ_G,IYZ_G,IY,IZ,ALPHA,Y_MAX,Y_MIN,Z_MAX,Z_MIN,R_MAX,RY,RZ,Y_P,Z_P,IY_P,IZ_P,IYZ_P,IY_P,IZ_P,IYR2_G,IZR2_G,IYR2,IZR2,IXR2_P,IYR2_P,JX,RT,PCTY,PCTZ,EY,EZ,JG,AY,AZ' # Header of the output file
 HEADER_TEMP='NAME,H,B,Tw,Tf,R' # Header of the temp file
 fileInput =  WORKING_DIR + INPUT_FILE # Define input file
 fileOutput = WORKING_DIR + OUTPUT_FILE # Define output file
@@ -49,7 +49,9 @@ for i in index: # Loop on all sections defined in input file
     ##     ## ##       ##    ## ##     ##
     ##     ## ########  ######  ##     ##
     # Launch geometry and mesh processing
-    salome_run = Popen(SALOME_ROOT + ' -t ' + WORKING_DIR + PROC_FILE, shell='False')
+    salome_stop = Popen(SALOME_ROOT + ' killall',shell='True')
+    salome_stop.wait()
+    salome_run = Popen(SALOME_ROOT + ' -t ' + WORKING_DIR + PROC_FILE, shell='True')
     salome_run.wait()
        ###     ######  ######## ######## ########
       ## ##   ##    ##    ##    ##       ##     ##
@@ -62,5 +64,5 @@ for i in index: # Loop on all sections defined in input file
     f.write(data['NAME'][i]+',') # Write name of the next section
     f.close() # Close output file
     # Launch aster calculation
-    aster_run = Popen(ASTER_ROOT + 'as_run ' + EXPORT_FILE, shell='False')
+    aster_run = Popen(ASTER_ROOT + 'as_run ' + EXPORT_FILE, shell='True')
     aster_run.wait()

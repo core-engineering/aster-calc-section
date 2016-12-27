@@ -1,0 +1,2353 @@
+# ------------------------------------------------------------------------------------------
+# Impression du contenu du fichier de commandes à exécuter :
+# ------------------------------------------------------------------------------------------
+DEBUT(PAR_LOT='NON'); # Setting to use python
+
+ ######  ######## ######## ##     ## ########
+##    ## ##          ##    ##     ## ##     ##
+##       ##          ##    ##     ## ##     ##
+ ######  ######      ##    ##     ## ########
+      ## ##          ##    ##     ## ##
+##    ## ##          ##    ##     ## ##
+ ######  ########    ##     #######  ##
+import numpy as np
+import os
+WORKING_DIR='/media/Calculs/aster-calc-section/' # Working directory
+OUTPUT_FILE='SectionAuto.output' # Filename of the output file
+fileOutput = WORKING_DIR + OUTPUT_FILE # Define output file
+
+##     ## ########  ######  ##     ##
+###   ### ##       ##    ## ##     ##
+#### #### ##       ##       ##     ##
+## ### ## ######    ######  #########
+##     ## ##             ## ##     ##
+##     ## ##       ##    ## ##     ##
+##     ## ########  ######  ##     ##
+mesh=LIRE_MAILLAGE(UNITE=20,
+                   INFO_MED=1,
+                   INFO=1,
+                   FORMAT='MED',);
+
+
+ ######     ###    ##        ######  ##     ## ##
+##    ##   ## ##   ##       ##    ## ##     ## ##
+##        ##   ##  ##       ##       ##     ## ##
+##       ##     ## ##       ##       ##     ## ##
+##       ######### ##       ##       ##     ## ##
+##    ## ##     ## ##       ##    ## ##     ## ##
+ ######  ##     ## ########  ######   #######  ########
+section=MACR_CARA_POUTRE(MAILLAGE=mesh,
+                         GROUP_MA_BORD='MyBorder',
+                         GROUP_NO='MyPoint',
+                         INFO=1,
+                         ORIG_INER=(0,0),
+                         );
+
+######## ##     ## ########   #######  ########  ########
+##        ##   ##  ##     ## ##     ## ##     ##    ##
+##         ## ##   ##     ## ##     ## ##     ##    ##
+######      ###    ########  ##     ## ########     ##
+##         ## ##   ##        ##     ## ##   ##      ##
+##        ##   ##  ##        ##     ## ##    ##     ##
+######## ##     ## ##         #######  ##     ##    ##
+f = open(fileOutput,"a") # Open output file
+sect = section.EXTR_TABLE() # Extract aster object
+# Processing of the results
+output='%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f'
+nameOutput=[('A_M',float),('CDG_Y_M',float),('CDG_Z_M',float),('IY_G_M',float),('IZ_G_M',float),('IYZ_G_M',float),('A',float),('CDG_Y',float),('CDG_Z',float),('IY_G',float),('IZ_G',float),('IYZ_G',float),('IY',float),('IZ',float),('ALPHA',float),('Y_MAX',float),('Y_MIN',float),('Z_MAX',float),('Z_MIN',float),('R_MAX',float),('RY',float),('RZ',float),('Y_P',float),('Z_P',float),('IY_P',float),('IZ_P',float),('IYZ_P',float),('IYR2_G',float),('IZR2_G',float),('IYR2',float),('IZR2',float),('IYR2_P',float),('IZR2_P',float),('JX',float),('RT',float),('PCTY',float),('PCTZ',float),('EY',float),('EZ',float),('JG',float),('AY',float),('AZ',float)]
+n=len(sect.values()[nameOutput[0][0]])
+dataOutput = np.zeros(n,dtype=nameOutput)
+for str in [y[0] for y in nameOutput]:
+    dataOutput[str] = sect.values()[str]
+np.savetxt(f,dataOutput,fmt=output,comments='') # Write results in output file
+f.close() # Close output file
+
+FIN();
+
+# ------------------------------------------------------------------------------------------
+
+  Ouverture en écriture du fichier ./vola.1
+                                                                                
+                                                                                
+              -- CODE_ASTER -- VERSION : EXPLOITATION (stable) --               
+                                                                                
+                     Version 12.6.0 modifiée le 16/06/2016                      
+                     révision 77d3379d51e8 - branche 'v12'                      
+                         Copyright EDF R&D 1991 - 2016                          
+                                                                                
+                    Exécution du : Tue Dec 27 14:19:35 2016                     
+                     Nom de la machine : camille-VirtualBox                     
+                              Architecture : 64bit                              
+                          Type de processeur : x86_64                           
+      Système d'exploitation : Linux Ubuntu 16.04 xenial 4.4.0-57-generic       
+                        Langue des messages : en (UTF-8)                        
+                                                                                
+                           Version de Python : 2.7.12                           
+                           Version de NumPy : 1.11.3                            
+                           Parallélisme MPI : inactif                           
+                          Parallélisme OpenMP : actif                           
+                        Nombre de processus utilisés : 1                        
+                     Version de la librairie HDF5 : 1.8.14                      
+                      Version de la librairie MED : 3.2.0                       
+                       Librairie MFront : non disponible                        
+                     Version de la librairie MUMPS : 4.10.0                     
+                        Librairie PETSc : non disponible                        
+                    Version de la librairie SCOTCH : 5.1.10                     
+
+                  Mémoire limite pour l'exécution : 4800.00 Mo                  
+                   consommée par l'initialisation : 304.71 Mo                   
+                  par les objets du jeu de commandes : 0.00 Mo                  
+                 reste pour l'allocation dynamique : 4493.88 Mo                 
+                Taille limite des fichiers d'échange : 12.00 Go                 
+                                                                                
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0001            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  DEBUT(PAR_LOT='NON',
+        INFO=1,
+        RESERVE_CPU=_F(BORNE=900,),
+        MEMOIRE=_F(TAILLE_BLOC=800.0,
+                   TAILLE_GROUP_ELEM=1000,),
+        MESURE_TEMPS=_F(MOYENNE='NON',
+                        NIVE_DETAIL=1,),
+        IMPR_MACRO='NON',)
+
+
+   
+   !------------------------------------------------------------------------------------!
+   ! <A> <SUPERVIS_1>                                                                   !
+   !                                                                                    !
+   !  L'utilisation du mot-clé PAR_LOT='NON' permet d'accéder en lecture et en écriture !
+   !  au contenu des concepts Aster. De ce fait, votre étude est exclue du périmètre    !
+   !  qualifié de Code_Aster puisque toutes ses étapes ne peuvent être certifiées.      !
+   !                                                                                    !
+   !  Conseils :                                                                        !
+   !    - Il n'y a pas particulièrement de risque de résultat faux... sauf si votre     !
+   !      programmation l'introduit.                                                    !
+   !    - Distinguez le calcul lui-même (qui doit sans doute passer en PAR_LOT='OUI')   !
+   !      des post-traitements (qui nécessiteraient le mode PAR_LOT='NON') qui peuvent  !
+   !      être réalisés en POURSUITE.                                                   !
+   !                                                                                    !
+   !                                                                                    !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                     !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                             !
+   !------------------------------------------------------------------------------------!
+   
+
+  Valeur initiale du temps CPU maximum =   35996400 secondes
+  Valeur du temps CPU maximum passé aux commandes =   35995500 secondes
+  Réserve CPU prévue = 900 secondes
+
+  Ouverture en écriture du fichier ./glob.1
+
+  Ouverture en écriture du fichier ./vola.1
+
+  Ouverture en lecture du fichier /opt/aster/12.6/lib/aster/elem.1
+
+     Nom de la base                          :  ELEMBASE
+     Créée avec la version                   :  12.06.00
+     Nombre d'enregistrements utilisés       :  30
+     Nombre d'enregistrements maximum        :  512
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre d'identificateurs utilisés       :  123
+     Taille maximum du répertoire            :  300
+     Pourcentage d'utilisation du répertoire :  41 %
+
+  Ouverture en lecture du fichier /opt/aster/12.6/lib/aster/elem.1
+
+
+     Nom de la base                          :  ELEMBASE
+     Nombre d'enregistrements utilisés       :  30
+     Nombre d'enregistrements maximum        :  512
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  52
+     Volume des accès en lecture             :         40.62 Mo.
+     Nombre total d'accès en écriture        :  0
+     Volume des accès en écriture            :          0.00 Mo.
+     Nombre d'identificateurs utilisés       :  123
+     Taille maximum du répertoire            :  300
+     Pourcentage d'utilisation du répertoire :  41 %
+
+  Relecture des catalogues des éléments faite.
+
+  Fin de lecture (durée  0.020000  s.) 
+  # Mémoire (Mo) :   342.86 /   337.30 /    35.93 /    19.37 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0001   user+syst:        0.05s (syst:        0.02s, elaps:        0.11s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0002            Concept de type : maillage_sdaster
+  # ------------------------------------------------------------------------------------------
+  mesh = LIRE_MAILLAGE(INFO=1,
+                       UNITE=20,
+                       FORMAT='MED',
+                       INFO_MED=1,
+                       VERI_MAIL=_F(APLAT=1.E-3,
+                                    VERIF='OUI',),
+                       )
+
+  ====== VERIFICATION DU MAILLAGE ======
+
+
+------------ MAILLAGE mesh     - IMPRESSIONS NIVEAU  1 ------------
+
+MA-27-DECE-2016 14:19:36                                                        
+
+NOMBRE DE NOEUDS                        6919
+
+NOMBRE DE MAILLES                      13836
+                              SEG2                 1364
+                              TRIA3               12472
+
+NOMBRE DE GROUPES DE NOEUDS                4
+                              Group_Of_All_Nodes                6919
+                              MyPoint                              1
+                              MySect                            6919
+                              MyBorder                          1364
+
+NOMBRE DE GROUPES DE MAILLES               4
+                              Group_Of_All_Edges                1364
+                              MyBorder                          1364
+                              Group_Of_All_Faces               12472
+                              MySect                           12472
+
+--------------------------------------------------------------------------------
+
+  # Mémoire (Mo) :   342.86 /   340.15 /    35.93 /    19.37 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0002   user+syst:        0.09s (syst:        0.01s, elaps:        0.12s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0003            Concept de type : table_sdaster
+  # ------------------------------------------------------------------------------------------
+  section = MACR_CARA_POUTRE(INFO=1,
+                             GROUP_MA_BORD=('MyBorder', ),
+                             ORIG_INER=(0, 0),
+                             MAILLAGE=mesh,
+                             GROUP_NO=('MyPoint', ),
+                             TABLE_CARA='NON',)
+
+
+Sur les 13836 mailles du maillage .9000003, on a demandé l'affectation de 13836, on a pu en affecter 13836
+ Modélisation     Type maille  Élément fini     Nombre
+ D_PLAN           TRIA3        MEDPTR3          12472
+                  SEG2         MEPLSE2          1364
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.02
+
+ MATERIAU : .9000005
+ RELATION DE COMPORTEMENT: ELAS                            
+
+
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.05      0.01      0.08
+   
+   !----------------------------------------------------------------!
+   ! <A> <MODELISA7_9>                                              !
+   !                                                                !
+   !  le GROUP_NO :  MyBorder  existe déjà, on ne le crée donc pas. !
+   !                                                                !
+   !                                                                !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette !
+   ! alarme, vous pouvez obtenir des résultats inattendus !         !
+   !----------------------------------------------------------------!
+   
+
+------------ MAILLAGE .9000008 - IMPRESSIONS NIVEAU  1 ------------
+
+ASTER 12.06.00 CONCEPT .9000008 CALCULE LE 27/12/2016 A 14:19:36 DE TYPE        
+MAILLAGE_SDASTER                                                                
+
+NOMBRE DE NOEUDS                        6919
+
+NOMBRE DE MAILLES                      13836
+                              SEG2                 1364
+                              TRIA3               12472
+
+NOMBRE DE GROUPES DE NOEUDS                4
+                              Group_Of_All_Nodes                6919
+                              MyPoint                              1
+                              MySect                            6919
+                              MyBorder                          1364
+
+NOMBRE DE GROUPES DE MAILLES               4
+                              Group_Of_All_Edges                1364
+                              MyBorder                          1364
+                              Group_Of_All_Faces               12472
+                              MySect                           12472
+
+--------------------------------------------------------------------------------
+
+
+Sur les 13836 mailles du maillage .9000008, on a demandé l'affectation de 13836, on a pu en affecter 13836
+ Modélisation     Type maille  Élément fini     Nombre
+ PLAN             SEG2         THPLSE2          1364
+ PLAN             TRIA3        THPLTR3          12472
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.02
+
+ MATERIAU : .9000010
+ RELATION DE COMPORTEMENT: THER                            
+
+
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M1 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M2 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M3 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M4 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M5 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CATAMESS_41>                                                             !
+   !                                                                               !
+   ! Le message d'alarme 'CHARGES2_87' a été émis 5 fois, il ne sera plus affiché. !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CALCULEL_40>                                                             !
+   !                                                                               !
+   !  Erreur possible d'utilisation:                                               !
+   !    Vous avez affecté des données sur certaines mailles mais ces données       !
+   !    n'ont pas de signification pour les éléments finis portés par ces mailles. !
+   !    Il s'agit peut-être d'une erreur d'affectation.                            !
+   !                                                                               !
+   !  Champ : '.9000012.CHTH.SOURE'                                                !
+   !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
+   !  Grandeur : SOUR_R   Composante non reconnue : SOUR                           !
+   !                                                                               !
+   !  Ce problème concerne 1364 mailles                                            !
+   !  Les premières mailles concernées sont imprimées ci-dessous.                  !
+   !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+  Maille : M1. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M2. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M3. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M4. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M5. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+
+Le système linéaire à résoudre a 9647 degrés de liberté:
+   - 6919 sont des degrés de liberté physiques
+     (ils sont portés par 6919 noeuds du maillage)
+   - 2728 sont les couples de paramètres de Lagrange associés
+     aux 1364 relations linéaires dualisées.
+
+La matrice est de taille 9647 équations.
+Elle contient 33129 termes non nuls si elle est symétrique et 56611 termes non nuls si elle n'est pas symétrique (le nombre de
+termes non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
+Soit un taux de remplissage de   0.061 %.
+
+ Il n'y a pas d'état initial défini. On prend un état initial nul.
+
+  Archivage des champs
+    Champ stocké <TEMP> à l'instant  0.000000000000e+00 pour le numéro d'ordre 0
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.500E-01
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.07      0.01      0.08
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.10      0.00      0.13
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M1 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M2 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M3 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M4 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M5 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CATAMESS_41>                                                             !
+   !                                                                               !
+   ! Le message d'alarme 'CHARGES2_87' a été émis 5 fois, il ne sera plus affiché. !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CALCULEL_40>                                                             !
+   !                                                                               !
+   !  Erreur possible d'utilisation:                                               !
+   !    Vous avez affecté des données sur certaines mailles mais ces données       !
+   !    n'ont pas de signification pour les éléments finis portés par ces mailles. !
+   !    Il s'agit peut-être d'une erreur d'affectation.                            !
+   !                                                                               !
+   !  Champ : '.9000016.CHTH.SOURE'                                                !
+   !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
+   !  Grandeur : SOUR_F   Composante non reconnue : SOUR                           !
+   !                                                                               !
+   !  Ce problème concerne 1364 mailles                                            !
+   !  Les premières mailles concernées sont imprimées ci-dessous.                  !
+   !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+  Maille : M1. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M2. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M3. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M4. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M5. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+
+Le système linéaire à résoudre a 6921 degrés de liberté:
+   - 6919 sont des degrés de liberté physiques
+     (ils sont portés par 6919 noeuds du maillage)
+   - 2 sont les couples de paramètres de Lagrange associés
+     aux 1 relations linéaires dualisées.
+
+La matrice est de taille 6921 équations.
+Elle contient 26314 termes non nuls si elle est symétrique et 45707 termes non nuls si elle n'est pas symétrique (le nombre de
+termes non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
+Soit un taux de remplissage de   0.095 %.
+
+ Il n'y a pas d'état initial défini. On prend un état initial nul.
+
+  Archivage des champs
+    Champ stocké <TEMP> à l'instant  0.000000000000e+00 pour le numéro d'ordre 0
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.800E-01
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.07      0.01      0.09
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.12      0.00      0.16
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M1 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M2 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M3 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M4 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M5 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CATAMESS_41>                                                             !
+   !                                                                               !
+   ! Le message d'alarme 'CHARGES2_87' a été émis 5 fois, il ne sera plus affiché. !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CALCULEL_40>                                                             !
+   !                                                                               !
+   !  Erreur possible d'utilisation:                                               !
+   !    Vous avez affecté des données sur certaines mailles mais ces données       !
+   !    n'ont pas de signification pour les éléments finis portés par ces mailles. !
+   !    Il s'agit peut-être d'une erreur d'affectation.                            !
+   !                                                                               !
+   !  Champ : '.9000019.CHTH.SOURE'                                                !
+   !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
+   !  Grandeur : SOUR_F   Composante non reconnue : SOUR                           !
+   !                                                                               !
+   !  Ce problème concerne 1364 mailles                                            !
+   !  Les premières mailles concernées sont imprimées ci-dessous.                  !
+   !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+  Maille : M1. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M2. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M3. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M4. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M5. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+
+Le système linéaire à résoudre a 6921 degrés de liberté:
+   - 6919 sont des degrés de liberté physiques
+     (ils sont portés par 6919 noeuds du maillage)
+   - 2 sont les couples de paramètres de Lagrange associés
+     aux 1 relations linéaires dualisées.
+
+La matrice est de taille 6921 équations.
+Elle contient 26314 termes non nuls si elle est symétrique et 45707 termes non nuls si elle n'est pas symétrique (le nombre de
+termes non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
+Soit un taux de remplissage de   0.095 %.
+
+ Il n'y a pas d'état initial défini. On prend un état initial nul.
+
+  Archivage des champs
+    Champ stocké <TEMP> à l'instant  0.000000000000e+00 pour le numéro d'ordre 0
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.600E-01
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.07      0.00      0.08
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.10      0.00      0.14
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.06      0.00      0.06
+   
+   !--------------------------------------------------------------------------------------------!
+   ! <A> <SUPERVIS_9>                                                                           !
+   !                                                                                            !
+   ! Fonctionnalité obsolète : La commande 'INTE_MAIL_2D'                                       !
+   !                                                                                            !
+   ! La fonctionnalité mentionnée ci-dessus est obsolète et son utilisation                     !
+   ! est déconseillée dans la version du code que vous utilisez.                                !
+   ! Elle sera supprimée dans la version 13.                                                    !
+   !                                                                                            !
+   ! Conseils :                                                                                 !
+   ! - pour assurer la pérennité de votre étude, modifiez votre fichier de commandes ;          !
+   ! - si vous avez un besoin impérieux de cette fonctionnalité,                                !
+   !   rapprochez-vous de votre correspondant Club utilisateur ou de l'équipe de développement. !
+   !                                                                                            !
+   !                                                                                            !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                             !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                                     !
+   !--------------------------------------------------------------------------------------------!
+   
+
+ COURBE DEFINIE A PARTIR D'UNE LISTE DE MAILLES
+   COURBE DEFINIE PAR  1 CHEMIN(S)
+     CHEMIN NUMERO  1 DE TYPE "CYCLE"
+         MAILLES DEFINISSANT LE CHEMIN:
+          M1                    M1365   
+          M2                    M3033   
+          M3                    M1366   
+          M4                    M3034   
+          M5                    M1367   
+          M6                    M3035   
+          M7                    M1368   
+          M8                    M3036   
+          M9                    M1369   
+          M10                   M3037   
+          M11                   M1370   
+          M12                   M3038   
+          M13                   M1371   
+          M14                   M3039   
+          M15                   M1372   
+          M16                   M3040   
+          M17                   M1373   
+          M18                   M3041   
+          M19                   M1374   
+          M20                   M3042   
+          M21                   M1375   
+          M22                   M3043   
+          M23                   M1376   
+          M24                   M3044   
+          M25                   M1377   
+          M26                   M3045   
+          M27                   M1378   
+          M28                   M3046   
+          M29                   M1379   
+          M30                   M3047   
+          M31                   M1380   
+          M32                   M3048   
+          M33                   M1381   
+          M34                   M3049   
+          M35                   M1382   
+          M36                   M3050   
+          M37                   M1383   
+          M38                   M3051   
+          M39                   M1384   
+          M40                   M3052   
+          M41                   M1385   
+          M42                   M3053   
+          M43                   M1386   
+          M44                   M3054   
+          M45                   M1387   
+          M46                   M3055   
+          M47                   M1388   
+          M48                   M3056   
+          M49                   M1389   
+          M50                   M3057   
+          M51                   M1390   
+          M52                   M3058   
+          M53                   M1391   
+          M54                   M3059   
+          M55                   M1392   
+          M56                   M3060   
+          M57                   M1393   
+          M58                   M3061   
+          M59                   M1394   
+          M60                   M3062   
+          M61                   M1395   
+          M62                   M3063   
+          M63                   M1396   
+          M64                   M3064   
+          M65                   M1397   
+          M66                   M3065   
+          M67                   M1398   
+          M68                   M3066   
+          M69                   M1399   
+          M70                   M3067   
+          M71                   M1400   
+          M72                   M3068   
+          M73                   M1401   
+          M74                   M3069   
+          M75                   M1402   
+          M76                   M3070   
+          M77                   M1403   
+          M78                   M3071   
+          M79                   M1404   
+          M80                   M3072   
+          M81                   M1405   
+          M82                   M3073   
+          M83                   M1406   
+          M84                   M3075   
+          M200                  M1621   
+          M199                  M1620   
+          M198                  M1618   
+          M197                  M1617   
+          M196                  M1615   
+          M195                  M1614   
+          M194                  M1612   
+          M193                  M1611   
+          M192                  M1609   
+          M191                  M1608   
+          M190                  M1606   
+          M189                  M1605   
+          M188                  M1603   
+          M187                  M1602   
+          M186                  M1600   
+          M185                  M1599   
+          M184                  M1597   
+          M183                  M1596   
+          M182                  M1594   
+          M181                  M1593   
+          M180                  M1591   
+          M179                  M1590   
+          M178                  M1588   
+          M177                  M1587   
+          M176                  M1585   
+          M175                  M1584   
+          M174                  M1582   
+          M173                  M1581   
+          M172                  M1579   
+          M171                  M1578   
+          M170                  M1576   
+          M169                  M1575   
+          M233                  M3077   
+          M234                  M1641   
+          M235                  M3113   
+          M236                  M1642   
+          M237                  M3115   
+          M238                  M1643   
+          M239                  M3116   
+          M240                  M1644   
+          M241                  M3117   
+          M242                  M1645   
+          M243                  M3118   
+          M244                  M1646   
+          M245                  M3119   
+          M246                  M1647   
+          M247                  M3120   
+          M248                  M1648   
+          M249                  M3121   
+          M250                  M1649   
+          M251                  M3122   
+          M252                  M1650   
+          M253                  M3123   
+          M254                  M1651   
+          M255                  M3124   
+          M256                  M1652   
+          M257                  M3125   
+          M258                  M1653   
+          M259                  M3126   
+          M260                  M1654   
+          M261                  M3127   
+          M262                  M1655   
+          M263                  M3128   
+          M264                  M1656   
+          M265                  M3129   
+          M266                  M1657   
+          M267                  M3130   
+          M268                  M1658   
+          M269                  M3131   
+          M270                  M1659   
+          M271                  M3132   
+          M272                  M1660   
+          M273                  M3133   
+          M274                  M1661   
+          M275                  M3134   
+          M276                  M1662   
+          M277                  M3135   
+          M278                  M1663   
+          M279                  M3136   
+          M280                  M1664   
+          M281                  M3137   
+          M282                  M1665   
+          M283                  M3138   
+          M284                  M1666   
+          M285                  M3139   
+          M286                  M1667   
+          M287                  M3140   
+          M288                  M1668   
+          M289                  M3141   
+          M290                  M1669   
+          M291                  M3142   
+          M292                  M1670   
+          M293                  M3143   
+          M294                  M1671   
+          M295                  M3144   
+          M296                  M1672   
+          M297                  M3145   
+          M298                  M1673   
+          M299                  M3146   
+          M300                  M1674   
+          M301                  M3147   
+          M302                  M1675   
+          M303                  M3148   
+          M304                  M1676   
+          M305                  M3149   
+          M306                  M1677   
+          M307                  M3150   
+          M308                  M1678   
+          M309                  M3151   
+          M310                  M1679   
+          M311                  M3152   
+          M312                  M1680   
+          M313                  M3153   
+          M314                  M1681   
+          M315                  M3154   
+          M316                  M1682   
+          M317                  M3155   
+          M318                  M1683   
+          M319                  M3156   
+          M320                  M1684   
+          M321                  M3157   
+          M322                  M1685   
+          M323                  M3158   
+          M324                  M1686   
+          M325                  M3159   
+          M326                  M1687   
+          M327                  M3161   
+          M328                  M1688   
+          M425                  M1688   
+          M426                  M1882   
+          M427                  M3164   
+          M428                  M1883   
+          M429                  M3163   
+          M430                  M1884   
+          M431                  M3167   
+          M432                  M1885   
+          M433                  M1886   
+          M443                  M1886   
+          M444                  M1902   
+          M445                  M3173   
+          M446                  M1903   
+          M447                  M3171   
+          M448                  M1904   
+          M449                  M3177   
+          M450                  M1905   
+          M451                  M3178   
+          M452                  M1906   
+          M453                  M3179   
+          M454                  M1907   
+          M455                  M3180   
+          M456                  M1908   
+          M457                  M3181   
+          M458                  M1909   
+          M459                  M3182   
+          M460                  M1910   
+          M461                  M3183   
+          M462                  M1911   
+          M463                  M3184   
+          M464                  M1912   
+          M465                  M3185   
+          M466                  M1913   
+          M467                  M3186   
+          M468                  M1914   
+          M469                  M3187   
+          M470                  M1915   
+          M471                  M3188   
+          M472                  M1916   
+          M473                  M3189   
+          M474                  M1917   
+          M475                  M3190   
+          M476                  M1918   
+          M477                  M3191   
+          M478                  M1919   
+          M479                  M3192   
+          M480                  M1920   
+          M481                  M3193   
+          M482                  M1921   
+          M483                  M3194   
+          M484                  M1922   
+          M485                  M3195   
+          M486                  M1923   
+          M487                  M3196   
+          M488                  M1924   
+          M489                  M3197   
+          M490                  M1925   
+          M491                  M3198   
+          M492                  M1926   
+          M493                  M3199   
+          M494                  M1927   
+          M495                  M3200   
+          M496                  M1928   
+          M497                  M3201   
+          M498                  M1929   
+          M499                  M3202   
+          M500                  M1930   
+          M501                  M3203   
+          M502                  M1931   
+          M503                  M3204   
+          M504                  M1932   
+          M505                  M3205   
+          M506                  M1933   
+          M507                  M3206   
+          M508                  M1934   
+          M509                  M3207   
+          M510                  M1935   
+          M511                  M3208   
+          M512                  M1936   
+          M513                  M3209   
+          M514                  M1937   
+          M515                  M3210   
+          M516                  M1938   
+          M517                  M3211   
+          M518                  M1939   
+          M519                  M3212   
+          M520                  M1940   
+          M521                  M3213   
+          M522                  M1941   
+          M523                  M3214   
+          M524                  M1942   
+          M525                  M3215   
+          M526                  M1943   
+          M527                  M3216   
+          M528                  M1944   
+          M529                  M3217   
+          M530                  M1945   
+          M531                  M3218   
+          M532                  M1946   
+          M533                  M3219   
+          M534                  M1947   
+          M535                  M3220   
+          M536                  M1948   
+          M537                  M3221   
+          M538                  M1949   
+          M539                  M3222   
+          M540                  M1950   
+          M541                  M3223   
+          M542                  M1951   
+          M543                  M3224   
+          M544                  M1952   
+          M545                  M3225   
+          M546                  M1953   
+          M547                  M3226   
+          M548                  M1954   
+          M549                  M3227   
+          M550                  M1955   
+          M551                  M3228   
+          M552                  M1956   
+          M553                  M3229   
+          M554                  M1957   
+          M555                  M3230   
+          M556                  M1958   
+          M557                  M3231   
+          M558                  M1959   
+          M559                  M3232   
+          M560                  M1960   
+          M561                  M3233   
+          M562                  M1961   
+          M802                  M2435   
+          M801                  M2433   
+          M800                  M2431   
+          M799                  M2429   
+          M798                  M2427   
+          M797                  M2425   
+          M796                  M2423   
+          M795                  M2421   
+          M794                  M2419   
+          M793                  M2417   
+          M792                  M2415   
+          M791                  M2413   
+          M790                  M2411   
+          M789                  M2409   
+          M788                  M2407   
+          M787                  M2405   
+          M786                  M2403   
+          M785                  M2401   
+          M784                  M2399   
+          M783                  M2397   
+          M782                  M2395   
+          M781                  M2393   
+          M780                  M2391   
+          M779                  M2389   
+          M778                  M2387   
+          M777                  M2385   
+          M776                  M2383   
+          M775                  M2381   
+          M774                  M2379   
+          M773                  M2377   
+          M772                  M2375   
+          M771                  M2373   
+          M770                  M2371   
+          M769                  M2369   
+          M768                  M2367   
+          M767                  M2365   
+          M766                  M2363   
+          M765                  M2361   
+          M764                  M2359   
+          M763                  M2357   
+          M762                  M2355   
+          M761                  M2353   
+          M760                  M2351   
+          M759                  M2349   
+          M758                  M2347   
+          M757                  M2345   
+          M756                  M2343   
+          M755                  M2341   
+          M754                  M2339   
+          M753                  M2337   
+          M752                  M2335   
+          M751                  M2333   
+          M750                  M2331   
+          M749                  M2329   
+          M748                  M2327   
+          M747                  M2325   
+          M746                  M2323   
+          M745                  M2321   
+          M744                  M2319   
+          M743                  M2317   
+          M742                  M2315   
+          M741                  M2313   
+          M740                  M2311   
+          M739                  M2309   
+          M738                  M2307   
+          M737                  M2305   
+          M736                  M2303   
+          M735                  M2301   
+          M734                  M2299   
+          M733                  M2297   
+          M732                  M2295   
+          M731                  M2293   
+          M730                  M2291   
+          M729                  M2289   
+          M728                  M2287   
+          M727                  M2285   
+          M726                  M2283   
+          M725                  M2281   
+          M724                  M2279   
+          M723                  M2277   
+          M722                  M2275   
+          M721                  M2273   
+          M720                  M2271   
+          M719                  M2269   
+          M718                  M2267   
+          M717                  M2265   
+          M716                  M2263   
+          M715                  M2261   
+          M714                  M2259   
+          M713                  M2257   
+          M712                  M2255   
+          M711                  M2253   
+          M710                  M2251   
+          M709                  M2249   
+          M708                  M2247   
+          M707                  M2245   
+          M706                  M2243   
+          M705                  M2241   
+          M704                  M2239   
+          M703                  M2237   
+          M702                  M2235   
+          M701                  M2233   
+          M700                  M2231   
+          M699                  M2229   
+          M698                  M2227   
+          M697                  M2225   
+          M696                  M2223   
+          M695                  M2221   
+          M694                  M2219   
+          M693                  M2217   
+          M692                  M2215   
+          M691                  M2213   
+          M690                  M2211   
+          M689                  M2209   
+          M688                  M2207   
+          M687                  M2205   
+          M686                  M2203   
+          M685                  M2201   
+          M684                  M2200   
+          M683                  M2199   
+          M931                  M2199   
+          M930                  M3303   
+          M929                  M2509   
+          M928                  M2507   
+          M927                  M2505   
+          M926                  M2503   
+          M925                  M2501   
+          M924                  M2500   
+          M923                  M2499   
+          M1036                 M2499   
+          M1035                 M3312   
+          M1034                 M2701   
+          M1033                 M2699   
+          M1032                 M2697   
+          M1031                 M2695   
+          M1030                 M2693   
+          M1029                 M2691   
+          M1028                 M2689   
+          M1027                 M2687   
+          M1026                 M2685   
+          M1025                 M2683   
+          M1024                 M2681   
+          M1023                 M2679   
+          M1022                 M2677   
+          M1021                 M2675   
+          M1020                 M2673   
+          M1019                 M2671   
+          M1018                 M2669   
+          M1017                 M2667   
+          M1016                 M2665   
+          M1015                 M2663   
+          M1014                 M2661   
+          M1013                 M2659   
+          M1012                 M2657   
+          M1011                 M2655   
+          M1010                 M2653   
+          M1009                 M2651   
+          M1008                 M2649   
+          M1007                 M2647   
+          M1006                 M2645   
+          M1005                 M2643   
+          M1004                 M2641   
+          M1003                 M2639   
+          M1002                 M2637   
+          M1001                 M2635   
+          M1000                 M2633   
+          M999                  M2631   
+          M998                  M2629   
+          M997                  M2627   
+          M996                  M2625   
+          M995                  M2623   
+          M994                  M2621   
+          M993                  M2619   
+          M992                  M2617   
+          M991                  M2615   
+          M990                  M2613   
+          M989                  M2611   
+          M988                  M2609   
+          M987                  M2607   
+          M986                  M2605   
+          M985                  M2603   
+          M984                  M2601   
+          M983                  M2599   
+          M982                  M2597   
+          M981                  M2595   
+          M980                  M2593   
+          M979                  M2591   
+          M978                  M2589   
+          M977                  M2587   
+          M976                  M2585   
+          M975                  M2583   
+          M974                  M2581   
+          M973                  M2579   
+          M972                  M2577   
+          M971                  M2575   
+          M970                  M2573   
+          M969                  M2571   
+          M968                  M2569   
+          M967                  M2567   
+          M966                  M2565   
+          M965                  M2563   
+          M964                  M2561   
+          M963                  M2559   
+          M962                  M2557   
+          M961                  M2555   
+          M960                  M2553   
+          M959                  M2551   
+          M958                  M2549   
+          M957                  M2547   
+          M956                  M2545   
+          M955                  M2543   
+          M954                  M2541   
+          M953                  M2539   
+          M952                  M2537   
+          M951                  M2535   
+          M950                  M2533   
+          M949                  M2531   
+          M948                  M2529   
+          M947                  M2527   
+          M946                  M2525   
+          M945                  M2523   
+          M944                  M2521   
+          M943                  M2519   
+          M942                  M2517   
+          M941                  M2516   
+          M1133                 M3365   
+          M1134                 M2753   
+          M1135                 M3363   
+          M1136                 M2754   
+          M1137                 M3367   
+          M1138                 M2755   
+          M1139                 M3368   
+          M1140                 M2756   
+          M1141                 M3369   
+          M1142                 M2757   
+          M1143                 M3370   
+          M1144                 M2758   
+          M1145                 M3371   
+          M1146                 M2759   
+          M1147                 M3372   
+          M1148                 M2760   
+          M1149                 M3373   
+          M1150                 M2761   
+          M1151                 M3374   
+          M1152                 M2762   
+          M1153                 M3375   
+          M1154                 M2763   
+          M1155                 M3376   
+          M1156                 M2764   
+          M1157                 M3377   
+          M1158                 M2765   
+          M1159                 M3378   
+          M1160                 M2766   
+          M1161                 M3379   
+          M1162                 M2767   
+          M1163                 M3380   
+          M1164                 M2768   
+          M1280                 M2983   
+          M1279                 M2981   
+          M1278                 M2979   
+          M1277                 M2977   
+          M1276                 M2975   
+          M1275                 M2973   
+          M1274                 M2971   
+          M1273                 M2969   
+          M1272                 M2967   
+          M1271                 M2965   
+          M1270                 M2963   
+          M1269                 M2961   
+          M1268                 M2959   
+          M1267                 M2957   
+          M1266                 M2955   
+          M1265                 M2953   
+          M1264                 M2951   
+          M1263                 M2949   
+          M1262                 M2947   
+          M1261                 M2945   
+          M1260                 M2943   
+          M1259                 M2941   
+          M1258                 M2939   
+          M1257                 M2937   
+          M1256                 M2935   
+          M1255                 M2933   
+          M1254                 M2931   
+          M1253                 M2929   
+          M1252                 M2927   
+          M1251                 M2925   
+          M1250                 M2923   
+          M1249                 M2921   
+          M1248                 M2919   
+          M1247                 M2917   
+          M1246                 M2915   
+          M1245                 M2913   
+          M1244                 M2911   
+          M1243                 M2909   
+          M1242                 M2907   
+          M1241                 M2905   
+          M1240                 M2903   
+          M1239                 M2901   
+          M1238                 M2899   
+          M1237                 M2897   
+          M1236                 M2895   
+          M1235                 M2893   
+          M1234                 M2891   
+          M1233                 M2889   
+          M1232                 M2887   
+          M1231                 M2885   
+          M1230                 M2883   
+          M1229                 M2881   
+          M1228                 M2879   
+          M1227                 M2877   
+          M1226                 M2875   
+          M1225                 M2873   
+          M1224                 M2871   
+          M1223                 M2869   
+          M1222                 M2867   
+          M1221                 M2865   
+          M1220                 M2863   
+          M1219                 M2861   
+          M1218                 M2859   
+          M1217                 M2857   
+          M1216                 M2855   
+          M1215                 M2853   
+          M1214                 M2851   
+          M1213                 M2849   
+          M1212                 M2847   
+          M1211                 M2845   
+          M1210                 M2843   
+          M1209                 M2841   
+          M1208                 M2839   
+          M1207                 M2837   
+          M1206                 M2835   
+          M1205                 M2833   
+          M1204                 M2831   
+          M1203                 M2829   
+          M1202                 M2827   
+          M1201                 M2825   
+          M1200                 M2823   
+          M1199                 M2821   
+          M1198                 M2819   
+          M1197                 M2818   
+          M1281                 M3398   
+          M1282                 M2985   
+          M1283                 M3399   
+          M1284                 M2986   
+          M1285                 M3400   
+          M1286                 M2987   
+          M1287                 M3401   
+          M1288                 M2988   
+          M1289                 M3402   
+          M1290                 M2989   
+          M1291                 M3403   
+          M1292                 M2990   
+          M1293                 M3404   
+          M1294                 M2991   
+          M1295                 M3405   
+          M1296                 M2992   
+          M1297                 M3406   
+          M1298                 M2993   
+          M1299                 M3407   
+          M1300                 M2994   
+          M1301                 M3408   
+          M1302                 M2995   
+          M1303                 M3409   
+          M1304                 M2996   
+          M1305                 M3410   
+          M1306                 M2997   
+          M1307                 M3411   
+          M1308                 M2998   
+          M1309                 M3412   
+          M1310                 M2999   
+          M1311                 M3413   
+          M1312                 M3000   
+          M1313                 M3414   
+          M1314                 M3001   
+          M1315                 M3415   
+          M1316                 M3002   
+          M1317                 M3416   
+          M1318                 M3003   
+          M1319                 M3417   
+          M1320                 M3004   
+          M1321                 M3418   
+          M1322                 M3005   
+          M1323                 M3419   
+          M1324                 M3006   
+          M1325                 M3420   
+          M1326                 M3007   
+          M1327                 M3421   
+          M1328                 M3008   
+          M1329                 M3422   
+          M1330                 M3009   
+          M1331                 M3423   
+          M1332                 M3010   
+          M1333                 M3424   
+          M1334                 M3011   
+          M1335                 M3425   
+          M1336                 M3012   
+          M1337                 M3426   
+          M1338                 M3013   
+          M1339                 M3427   
+          M1340                 M3014   
+          M1341                 M3428   
+          M1342                 M3015   
+          M1343                 M3429   
+          M1344                 M3016   
+          M1345                 M3430   
+          M1346                 M3017   
+          M1347                 M3431   
+          M1348                 M3018   
+          M1349                 M3432   
+          M1350                 M3019   
+          M1351                 M3433   
+          M1352                 M3020   
+          M1353                 M3434   
+          M1354                 M3021   
+          M1355                 M3435   
+          M1356                 M3022   
+          M1357                 M3436   
+          M1358                 M3023   
+          M1359                 M3437   
+          M1360                 M3024   
+          M1361                 M3438   
+          M1362                 M3025   
+          M1363                 M3439   
+          M1364                 M3026   
+          M1196                 M2816   
+          M1195                 M2815   
+          M1194                 M2813   
+          M1193                 M2812   
+          M1192                 M2810   
+          M1191                 M2809   
+          M1190                 M2807   
+          M1189                 M2806   
+          M1188                 M2804   
+          M1187                 M2803   
+          M1186                 M2801   
+          M1185                 M2800   
+          M1184                 M2798   
+          M1183                 M2797   
+          M1182                 M2795   
+          M1181                 M2794   
+          M1180                 M2792   
+          M1179                 M2791   
+          M1178                 M2789   
+          M1177                 M2788   
+          M1176                 M2786   
+          M1175                 M2785   
+          M1174                 M2783   
+          M1173                 M2782   
+          M1172                 M2780   
+          M1171                 M2779   
+          M1170                 M2777   
+          M1169                 M2776   
+          M1168                 M2774   
+          M1167                 M2773   
+          M1166                 M2771   
+          M1165                 M2769   
+          M1037                 M2704   
+          M1038                 M3314   
+          M1039                 M2705   
+          M1040                 M3311   
+          M1041                 M2706   
+          M1042                 M3317   
+          M1043                 M2707   
+          M1044                 M3318   
+          M1045                 M2708   
+          M1046                 M3319   
+          M1047                 M2709   
+          M1048                 M3320   
+          M1049                 M2710   
+          M1050                 M3321   
+          M1051                 M2711   
+          M1052                 M3322   
+          M1053                 M2712   
+          M1054                 M3323   
+          M1055                 M2713   
+          M1056                 M3324   
+          M1057                 M2714   
+          M1058                 M3325   
+          M1059                 M2715   
+          M1060                 M3326   
+          M1061                 M2716   
+          M1062                 M3327   
+          M1063                 M2717   
+          M1064                 M3328   
+          M1065                 M2718   
+          M1066                 M3329   
+          M1067                 M2719   
+          M1068                 M3330   
+          M1069                 M2720   
+          M1070                 M3331   
+          M1071                 M2721   
+          M1072                 M3332   
+          M1073                 M2722   
+          M1074                 M3333   
+          M1075                 M2723   
+          M1076                 M3334   
+          M1077                 M2724   
+          M1078                 M3335   
+          M1079                 M2725   
+          M1080                 M3336   
+          M1081                 M2726   
+          M1082                 M3337   
+          M1083                 M2727   
+          M1084                 M3338   
+          M1085                 M2728   
+          M1086                 M3339   
+          M1087                 M2729   
+          M1088                 M3340   
+          M1089                 M2730   
+          M1090                 M3341   
+          M1091                 M2731   
+          M1092                 M3342   
+          M1093                 M2732   
+          M1094                 M3343   
+          M1095                 M2733   
+          M1096                 M3344   
+          M1097                 M2734   
+          M1098                 M3345   
+          M1099                 M2735   
+          M1100                 M3346   
+          M1101                 M2736   
+          M1102                 M3347   
+          M1103                 M2737   
+          M1104                 M3348   
+          M1105                 M2738   
+          M1106                 M3349   
+          M1107                 M2739   
+          M1108                 M3350   
+          M1109                 M2740   
+          M1110                 M3351   
+          M1111                 M2741   
+          M1112                 M3352   
+          M1113                 M2742   
+          M1114                 M3353   
+          M1115                 M2743   
+          M1116                 M3354   
+          M1117                 M2744   
+          M1118                 M3355   
+          M1119                 M2745   
+          M1120                 M3356   
+          M1121                 M2746   
+          M1122                 M3357   
+          M1123                 M2747   
+          M1124                 M3358   
+          M1125                 M2748   
+          M1126                 M3359   
+          M1127                 M2749   
+          M1128                 M3360   
+          M1129                 M2750   
+          M1130                 M3361   
+          M1131                 M2751   
+          M1132                 M2511   
+          M932                  M2511   
+          M933                  M2512   
+          M934                  M3306   
+          M935                  M2513   
+          M936                  M3302   
+          M937                  M2514   
+          M938                  M3309   
+          M939                  M2515   
+          M940                  M2437   
+          M803                  M2437   
+          M804                  M2438   
+          M805                  M3241   
+          M806                  M2439   
+          M807                  M3239   
+          M808                  M2440   
+          M809                  M3244   
+          M810                  M2441   
+          M811                  M3245   
+          M812                  M2442   
+          M813                  M3246   
+          M814                  M2443   
+          M815                  M3247   
+          M816                  M2444   
+          M817                  M3248   
+          M818                  M2445   
+          M819                  M3249   
+          M820                  M2446   
+          M821                  M3250   
+          M822                  M2447   
+          M823                  M3251   
+          M824                  M2448   
+          M825                  M3252   
+          M826                  M2449   
+          M827                  M3253   
+          M828                  M2450   
+          M829                  M3254   
+          M830                  M2451   
+          M831                  M3255   
+          M832                  M2452   
+          M833                  M3256   
+          M834                  M2453   
+          M835                  M3257   
+          M836                  M2454   
+          M837                  M3258   
+          M838                  M2455   
+          M839                  M3259   
+          M840                  M2456   
+          M841                  M3260   
+          M842                  M2457   
+          M843                  M3261   
+          M844                  M2458   
+          M845                  M3262   
+          M846                  M2459   
+          M847                  M3263   
+          M848                  M2460   
+          M849                  M3264   
+          M850                  M2461   
+          M851                  M3265   
+          M852                  M2462   
+          M853                  M3266   
+          M854                  M2463   
+          M855                  M3267   
+          M856                  M2464   
+          M857                  M3268   
+          M858                  M2465   
+          M859                  M3269   
+          M860                  M2466   
+          M861                  M3270   
+          M862                  M2467   
+          M863                  M3271   
+          M864                  M2468   
+          M865                  M3272   
+          M866                  M2469   
+          M867                  M3273   
+          M868                  M2470   
+          M869                  M3274   
+          M870                  M2471   
+          M871                  M3275   
+          M872                  M2472   
+          M873                  M3276   
+          M874                  M2473   
+          M875                  M3277   
+          M876                  M2474   
+          M877                  M3278   
+          M878                  M2475   
+          M879                  M3279   
+          M880                  M2476   
+          M881                  M3280   
+          M882                  M2477   
+          M883                  M3281   
+          M884                  M2478   
+          M885                  M3282   
+          M886                  M2479   
+          M887                  M3283   
+          M888                  M2480   
+          M889                  M3284   
+          M890                  M2481   
+          M891                  M3285   
+          M892                  M2482   
+          M893                  M3286   
+          M894                  M2483   
+          M895                  M3287   
+          M896                  M2484   
+          M897                  M3288   
+          M898                  M2485   
+          M899                  M3289   
+          M900                  M2486   
+          M901                  M3290   
+          M902                  M2487   
+          M903                  M3291   
+          M904                  M2488   
+          M905                  M3292   
+          M906                  M2489   
+          M907                  M3293   
+          M908                  M2490   
+          M909                  M3294   
+          M910                  M2491   
+          M911                  M3295   
+          M912                  M2492   
+          M913                  M3296   
+          M914                  M2493   
+          M915                  M3297   
+          M916                  M2494   
+          M917                  M3298   
+          M918                  M2495   
+          M919                  M3299   
+          M920                  M2496   
+          M921                  M3300   
+          M922                  M2497   
+          M682                  M2197   
+          M681                  M2195   
+          M680                  M2193   
+          M679                  M2191   
+          M678                  M2189   
+          M677                  M2187   
+          M676                  M2185   
+          M675                  M2183   
+          M674                  M2181   
+          M673                  M2179   
+          M672                  M2177   
+          M671                  M2175   
+          M670                  M2173   
+          M669                  M2171   
+          M668                  M2169   
+          M667                  M2167   
+          M666                  M2165   
+          M665                  M2163   
+          M664                  M2161   
+          M663                  M2159   
+          M662                  M2157   
+          M661                  M2155   
+          M660                  M2153   
+          M659                  M2151   
+          M658                  M2149   
+          M657                  M2147   
+          M656                  M2145   
+          M655                  M2143   
+          M654                  M2141   
+          M653                  M2139   
+          M652                  M2137   
+          M651                  M2135   
+          M650                  M2133   
+          M649                  M2131   
+          M648                  M2129   
+          M647                  M2127   
+          M646                  M2125   
+          M645                  M2123   
+          M644                  M2121   
+          M643                  M2119   
+          M642                  M2117   
+          M641                  M2115   
+          M640                  M2113   
+          M639                  M2111   
+          M638                  M2109   
+          M637                  M2107   
+          M636                  M2105   
+          M635                  M2103   
+          M634                  M2101   
+          M633                  M2099   
+          M632                  M2097   
+          M631                  M2095   
+          M630                  M2093   
+          M629                  M2091   
+          M628                  M2089   
+          M627                  M2087   
+          M626                  M2085   
+          M625                  M2083   
+          M624                  M2081   
+          M623                  M2079   
+          M622                  M2077   
+          M621                  M2075   
+          M620                  M2073   
+          M619                  M2071   
+          M618                  M2069   
+          M617                  M2067   
+          M616                  M2065   
+          M615                  M2063   
+          M614                  M2061   
+          M613                  M2059   
+          M612                  M2057   
+          M611                  M2055   
+          M610                  M2053   
+          M609                  M2051   
+          M608                  M2049   
+          M607                  M2047   
+          M606                  M2045   
+          M605                  M2043   
+          M604                  M2041   
+          M603                  M2039   
+          M602                  M2037   
+          M601                  M2035   
+          M600                  M2033   
+          M599                  M2031   
+          M598                  M2029   
+          M597                  M2027   
+          M596                  M2025   
+          M595                  M2023   
+          M594                  M2021   
+          M593                  M2019   
+          M592                  M2017   
+          M591                  M2015   
+          M590                  M2013   
+          M589                  M2011   
+          M588                  M2009   
+          M587                  M2007   
+          M586                  M2005   
+          M585                  M2003   
+          M584                  M2001   
+          M583                  M1999   
+          M582                  M1997   
+          M581                  M1995   
+          M580                  M1993   
+          M579                  M1991   
+          M578                  M1989   
+          M577                  M1987   
+          M576                  M1985   
+          M575                  M1983   
+          M574                  M1981   
+          M573                  M1979   
+          M572                  M1977   
+          M571                  M1975   
+          M570                  M1973   
+          M569                  M1971   
+          M568                  M1969   
+          M567                  M1967   
+          M566                  M1965   
+          M565                  M1963   
+          M564                  M1962   
+          M563                  M1901   
+          M442                  M1901   
+          M441                  M1899   
+          M440                  M1897   
+          M439                  M1895   
+          M438                  M1893   
+          M437                  M1891   
+          M436                  M1889   
+          M435                  M1887   
+          M434                  M1880   
+          M424                  M1879   
+          M423                  M1877   
+          M422                  M1875   
+          M421                  M1873   
+          M420                  M1871   
+          M419                  M1869   
+          M418                  M1867   
+          M417                  M1865   
+          M416                  M1863   
+          M415                  M1861   
+          M414                  M1859   
+          M413                  M1857   
+          M412                  M1855   
+          M411                  M1853   
+          M410                  M1851   
+          M409                  M1849   
+          M408                  M1847   
+          M407                  M1845   
+          M406                  M1843   
+          M405                  M1841   
+          M404                  M1839   
+          M403                  M1837   
+          M402                  M1835   
+          M401                  M1833   
+          M400                  M1831   
+          M399                  M1829   
+          M398                  M1827   
+          M397                  M1825   
+          M396                  M1823   
+          M395                  M1821   
+          M394                  M1819   
+          M393                  M1817   
+          M392                  M1815   
+          M391                  M1813   
+          M390                  M1811   
+          M389                  M1809   
+          M388                  M1807   
+          M387                  M1805   
+          M386                  M1803   
+          M385                  M1801   
+          M384                  M1799   
+          M383                  M1797   
+          M382                  M1795   
+          M381                  M1793   
+          M380                  M1791   
+          M379                  M1789   
+          M378                  M1787   
+          M377                  M1785   
+          M376                  M1783   
+          M375                  M1781   
+          M374                  M1779   
+          M373                  M1777   
+          M372                  M1775   
+          M371                  M1773   
+          M370                  M1771   
+          M369                  M1769   
+          M368                  M1767   
+          M367                  M1765   
+          M366                  M1763   
+          M365                  M1761   
+          M364                  M1759   
+          M363                  M1757   
+          M362                  M1755   
+          M361                  M1753   
+          M360                  M1751   
+          M359                  M1749   
+          M358                  M1747   
+          M357                  M1745   
+          M356                  M1743   
+          M355                  M1741   
+          M354                  M1739   
+          M353                  M1737   
+          M352                  M1735   
+          M351                  M1733   
+          M350                  M1731   
+          M349                  M1729   
+          M348                  M1727   
+          M347                  M1725   
+          M346                  M1723   
+          M345                  M1721   
+          M344                  M1719   
+          M343                  M1717   
+          M342                  M1715   
+          M341                  M1713   
+          M340                  M1711   
+          M339                  M1709   
+          M338                  M1707   
+          M337                  M1705   
+          M336                  M1703   
+          M335                  M1701   
+          M334                  M1699   
+          M333                  M1697   
+          M332                  M1695   
+          M331                  M1693   
+          M330                  M1691   
+          M329                  M1689   
+          M201                  M1623   
+          M202                  M3095   
+          M203                  M1624   
+          M204                  M3097   
+          M205                  M1625   
+          M206                  M3098   
+          M207                  M1626   
+          M208                  M3099   
+          M209                  M1627   
+          M210                  M3100   
+          M211                  M1628   
+          M212                  M3101   
+          M213                  M1629   
+          M214                  M3102   
+          M215                  M1630   
+          M216                  M3103   
+          M217                  M1631   
+          M218                  M3104   
+          M219                  M1632   
+          M220                  M3105   
+          M221                  M1633   
+          M222                  M3106   
+          M223                  M1634   
+          M224                  M3107   
+          M225                  M1635   
+          M226                  M3108   
+          M227                  M1636   
+          M228                  M3109   
+          M229                  M1637   
+          M230                  M3110   
+          M231                  M1638   
+          M232                  M1639   
+          M168                  M1573   
+          M167                  M1571   
+          M166                  M1569   
+          M165                  M1567   
+          M164                  M1565   
+          M163                  M1563   
+          M162                  M1561   
+          M161                  M1559   
+          M160                  M1557   
+          M159                  M1555   
+          M158                  M1553   
+          M157                  M1551   
+          M156                  M1549   
+          M155                  M1547   
+          M154                  M1545   
+          M153                  M1543   
+          M152                  M1541   
+          M151                  M1539   
+          M150                  M1537   
+          M149                  M1535   
+          M148                  M1533   
+          M147                  M1531   
+          M146                  M1529   
+          M145                  M1527   
+          M144                  M1525   
+          M143                  M1523   
+          M142                  M1521   
+          M141                  M1519   
+          M140                  M1517   
+          M139                  M1515   
+          M138                  M1513   
+          M137                  M1511   
+          M136                  M1509   
+          M135                  M1507   
+          M134                  M1505   
+          M133                  M1503   
+          M132                  M1501   
+          M131                  M1499   
+          M130                  M1497   
+          M129                  M1495   
+          M128                  M1493   
+          M127                  M1491   
+          M126                  M1489   
+          M125                  M1487   
+          M124                  M1485   
+          M123                  M1483   
+          M122                  M1481   
+          M121                  M1479   
+          M120                  M1477   
+          M119                  M1475   
+          M118                  M1473   
+          M117                  M1471   
+          M116                  M1469   
+          M115                  M1467   
+          M114                  M1465   
+          M113                  M1463   
+          M112                  M1461   
+          M111                  M1459   
+          M110                  M1457   
+          M109                  M1455   
+          M108                  M1453   
+          M107                  M1451   
+          M106                  M1449   
+          M105                  M1447   
+          M104                  M1445   
+          M103                  M1443   
+          M102                  M1441   
+          M101                  M1439   
+          M100                  M1437   
+          M99                   M1435   
+          M98                   M1433   
+          M97                   M1431   
+          M96                   M1429   
+          M95                   M1427   
+          M94                   M1425   
+          M93                   M1423   
+          M92                   M1421   
+          M91                   M1419   
+          M90                   M1417   
+          M89                   M1415   
+          M88                   M1413   
+          M87                   M1411   
+          M86                   M1409   
+          M85                   M1407   
+          M1      
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.03      0.00      0.03
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.04      0.00      0.06
+
+------------ MAILLAGE .9000025 - IMPRESSIONS NIVEAU  1 ------------
+
+ASTER 12.06.00 CONCEPT .9000025 CALCULE LE 27/12/2016 A 14:19:41 DE TYPE        
+MAILLAGE_SDASTER                                                                
+
+NOMBRE DE NOEUDS                        6919
+
+NOMBRE DE MAILLES                      13836
+                              SEG2                 1364
+                              TRIA3               12472
+
+NOMBRE DE GROUPES DE NOEUDS                4
+                              Group_Of_All_Nodes                6919
+                              MyPoint                              1
+                              MySect                            6919
+                              MyBorder                          1364
+
+NOMBRE DE GROUPES DE MAILLES               4
+                              Group_Of_All_Edges                1364
+                              MyBorder                          1364
+                              Group_Of_All_Faces               12472
+                              MySect                           12472
+
+--------------------------------------------------------------------------------
+
+
+Sur les 13836 mailles du maillage .9000025, on a demandé l'affectation de 13836, on a pu en affecter 13836
+ Modélisation     Type maille  Élément fini     Nombre
+ PLAN             SEG2         THPLSE2          1364
+ PLAN             TRIA3        THPLTR3          12472
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M1 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M2 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M3 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M4 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M5 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CATAMESS_41>                                                             !
+   !                                                                               !
+   ! Le message d'alarme 'CHARGES2_87' a été émis 5 fois, il ne sera plus affiché. !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CALCULEL_40>                                                             !
+   !                                                                               !
+   !  Erreur possible d'utilisation:                                               !
+   !    Vous avez affecté des données sur certaines mailles mais ces données       !
+   !    n'ont pas de signification pour les éléments finis portés par ces mailles. !
+   !    Il s'agit peut-être d'une erreur d'affectation.                            !
+   !                                                                               !
+   !  Champ : '.9000030.CHTH.SOURE'                                                !
+   !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
+   !  Grandeur : SOUR_R   Composante non reconnue : SOUR                           !
+   !                                                                               !
+   !  Ce problème concerne 1364 mailles                                            !
+   !  Les premières mailles concernées sont imprimées ci-dessous.                  !
+   !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+  Maille : M1. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M2. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M3. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M4. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+  Maille : M5. Cette maille appartient aux GROUP_MA : Group_Of_All_Edges MyBorder  
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.05      0.00      0.10
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.05      0.00      0.08
+ --- RENUMEROTATION DES NOEUDS DU MODELE (RCMK) :
+    --- NOMBRE DE COMPOSANTES CONNEXES DU MODELE :                    1
+    --- HAUTEUR DE COLONNE MOYENNE (EN NOEUDS)
+         (EN NE TENANT COMPTE QUE DES NOEUDS PHYSIQUES)
+         AVANT RENUMEROTATION: 1.029D+03
+         APRES RENUMEROTATION: 2.028D+01
+
+Le système linéaire à résoudre a 6919 degrés de liberté:
+   - 6919 sont des degrés de liberté physiques
+     (ils sont portés par 6919 noeuds du maillage)
+   - 0 sont les couples de paramètres de Lagrange associés
+     aux 0 relations linéaires dualisées.
+
+La matrice est de taille 6919 équations.
+Elle contient 26309 termes non nuls si elle est symétrique et 45699 termes non nuls si elle n'est pas symétrique (le nombre de
+termes non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
+Soit un taux de remplissage de   0.095 %.
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.02
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
+
+Le système linéaire à résoudre a 6921 degrés de liberté:
+   - 6919 sont des degrés de liberté physiques
+     (ils sont portés par 6919 noeuds du maillage)
+   - 2 sont les couples de paramètres de Lagrange associés
+     aux 1 relations linéaires dualisées.
+
+La matrice est de taille 6921 équations.
+Elle contient 40150 termes non nuls si elle est symétrique et 73379 termes non nuls si elle n'est pas symétrique (le nombre de
+termes non nuls est susceptible de varier si l'on utilise le contact en formulation continue ou la méthode XFEM avec contact).
+Soit un taux de remplissage de   0.153 %.
+
+ Il n'y a pas d'état initial défini. On prend un état initial nul.
+
+  Archivage des champs
+    Champ stocké <TEMP> à l'instant  0.000000000000e+00 pour le numéro d'ordre 0
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   7.845E+01
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):     78.46      0.08     79.11
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.07      0.00      0.11
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.03      0.00      0.04
+  # Mémoire (Mo) :   547.52 /   358.75 /   236.29 /    31.13 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin commande No : 0003   user+syst:       83.40s (syst:        0.12s, elaps:       85.00s)
+  # ------------------------------------------------------------------------------------------
+
+  # ------------------------------------------------------------------------------------------
+  # Commande No :  0052            Concept de type : -
+  # ------------------------------------------------------------------------------------------
+  FIN(RETASSAGE='NON',
+      INFO_RESU='OUI',
+      FORMAT_HDF='NON',
+      UNITE=6,
+      )
+
+   
+   !-------------------------------------------------------------------------!
+   ! <I> <CATAMESS_89>                                                       !
+   !                                                                         !
+   !     Liste des alarmes émises lors de l'exécution du calcul.             !
+   !                                                                         !
+   !     Les alarmes que vous avez choisies d'ignorer sont précédées de (*). !
+   !     Nombre d'occurrences pour chacune des alarmes :                     !
+   !            CALCULEL_40          émise    4 fois                         !
+   !            CHARGES2_87          émise 5456 fois                         !
+   !            MODELISA7_9          émise    1 fois                         !
+   !            SUPERVIS_1           émise    1 fois                         !
+   !            SUPERVIS_9           émise    1 fois                         !
+   !-------------------------------------------------------------------------!
+   
+ ---------------------------------------------------------------------------
+ Concepts de la base: G
+    Nom       Type                 Taille (Mo)         Nombre      Nombre de
+                                                     d'objets       segments
+    TOTAL                                22.74            176            266
+  
+    mesh       MAILLAGE_SDASTER           1.60             35             64
+    section    TABLE_SDASTER              0.01             96             96
+    &FOZERO                               0.00              2              2
+    &&_NUM_C                              0.00              1              1
+    &CATA.AC                              0.00              2              4
+    &CATA.CL                              0.28              1              3
+    &CATA.GD                              0.07              4             11
+    &CATA.ME                              0.15              2              4
+    &CATA.OP                              0.31              4             19
+    &CATA.PH                              0.00              1              1
+    &CATA.PR                              0.00              2              4
+    &CATA.TE                             20.29             17             42
+    &CATA.TH                              0.01              2              4
+    &CATA.TM                              0.02              7             11
+ ---------------------------------------------------------------------------
+
+
+     Nom de la base                          :  GLOBALE
+     Nombre d'enregistrements utilisés       :  34
+     Nombre d'enregistrements maximum        :  62914
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  7
+     Volume des accès en lecture             :          5.47 Mo.
+     Nombre total d'accès en écriture        :  48
+     Volume des accès en écriture            :         37.50 Mo.
+     Nombre d'identificateurs utilisés       :  1273
+     Taille maximum du répertoire            :  2000
+     Pourcentage d'utilisation du répertoire :  63 %
+
+
+     Nom de la base                          :  VOLATILE
+     Nombre d'enregistrements utilisés       :  3
+     Nombre d'enregistrements maximum        :  62914
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  0
+     Volume des accès en lecture             :          0.00 Mo.
+     Nombre total d'accès en écriture        :  4
+     Volume des accès en écriture            :          3.12 Mo.
+     Nombre d'identificateurs utilisés       :  1038
+     Taille maximum du répertoire            :  2000
+     Pourcentage d'utilisation du répertoire :  51 %
+
+ <FIN> Arrêt normal dans "FIN".
+
+ La mémoire demandée au lancement est surestimée, elle est de 4800.00 Mo.
+ Le pic mémoire utilisée est de 547.52 Mo.
+
+
+
+     Nom de la base                          :  ELEMBASE
+     Nombre d'enregistrements utilisés       :  30
+     Nombre d'enregistrements maximum        :  512
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  52
+     Volume des accès en lecture             :         40.62 Mo.
+     Nombre total d'accès en écriture        :  0
+     Volume des accès en écriture            :          0.00 Mo.
+     Nombre d'identificateurs utilisés       :  123
+     Taille maximum du répertoire            :  300
+     Pourcentage d'utilisation du répertoire :  41 %
+  
+ <I>       FERMETURE DES BASES EFFECTUEE
+  
+   STATISTIQUES CONCERNANT L'ALLOCATION DYNAMIQUE :
+     TAILLE CUMULEE MAXIMUM            :                  236  Mo.
+     TAILLE CUMULEE LIBEREE            :                  257  Mo.
+     NOMBRE TOTAL D'ALLOCATIONS        :              2115512
+     NOMBRE TOTAL DE LIBERATIONS       :              2115492
+     APPELS AU MECANISME DE LIBERATION :                    0
+     TAILLE MEMOIRE CUMULEE RECUPEREE  :                    0  Mo.
+     VOLUME DES LECTURES               :                    0  Mo.
+     VOLUME DES ECRITURES              :                    0  Mo.
+  
+   MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :      31.13 Mo
+     - IMPOSE DE NOMBREUX ACCES DISQUE
+     - RALENTIT LA VITESSE D'EXECUTION
+   MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :     236.29 Mo
+     - LIMITE LES ACCES DISQUE
+     - AMELIORE LA VITESSE D'EXECUTION
+   MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS     :     547.52 Mo
+     - COMPREND LA MEMOIRE CONSOMMEE PAR  JEVEUX, 
+       LE SUPERVISEUR PYTHON, LES LIBRAIRIES EXTERNES
+  
+ <I>       FIN D'EXECUTION LE : MA-27-DECE-2016 14:21:01
+
+
+  <I> Informations sur les temps d'exécution
+      Temps cpu total                        83.92 s
+      Temps cpu user total                   83.70 s
+      Temps cpu systeme total                 0.22 s
+      Temps cpu restant                 35995416.08 s
+
+
+  La signature de la base sauvegardée est (à l'adresse 0) :
+    76b478d6f5dc646e4f2f1c0037e58845782929bb
+
+ ********************************************************************************
+ * COMMAND                  :       USER :     SYSTEM :   USER+SYS :    ELAPSED *
+ ********************************************************************************
+ * init (jdc)               :      83.70 :       0.22 :      83.92 :      85.71 *
+ *  . compile               :       0.00 :       0.00 :       0.00 :       0.01 *
+ *  . exec_compile          :      83.47 :       0.20 :      83.67 :      85.45 *
+ * DEBUT                    :       0.03 :       0.02 :       0.05 :       0.11 *
+ * LIRE_MAILLAGE            :       0.08 :       0.01 :       0.09 :       0.12 *
+ * MACR_CARA_POUTRE         :      83.28 :       0.12 :      83.40 :      85.00 *
+ * FIN                      :       0.03 :       0.04 :       0.07 :       0.16 *
+ *  . part Superviseur      :       0.55 :       0.05 :       0.60 :       0.72 *
+ *  . part Fortran          :      83.15 :       0.17 :      83.32 :      84.98 *
+ ********************************************************************************
+ * TOTAL_JOB                :      83.70 :       0.22 :      83.92 :      85.71 *
+ ********************************************************************************
+
+--- Fin de l'exécution
+EXECUTION_CODE_ASTER_EXIT_28808=0

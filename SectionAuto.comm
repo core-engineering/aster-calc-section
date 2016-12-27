@@ -37,7 +37,6 @@ section=MACR_CARA_POUTRE(MAILLAGE=mesh,
                          GROUP_MA_BORD='MyBorder',
                          GROUP_NO='MyPoint',
                          INFO=1,
-                         TABLE_CARA='OUI',
                          ORIG_INER=(0,0),
                          );
 
@@ -51,8 +50,8 @@ section=MACR_CARA_POUTRE(MAILLAGE=mesh,
 f = open(fileOutput,"a") # Open output file
 sect = section.EXTR_TABLE() # Extract aster object
 # Processing of the results
-output='%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f'
-nameOutput = [('LIEU', float),('A',float), ('IY',float), ('IZ',float), ('AY', float), ('AZ', float), ('EY', float), ('EZ', float), ('JX', float), ('JG', float), ('IYR2', float), ('IZR2', float), ('RY', float), ('RZ', float), ('RT', float)]
+output='%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f'
+nameOutput=[('A_M',float),('CDG_Y_M',float),('CDG_Z_M',float),('IY_G_M',float),('IZ_G_M',float),('IYZ_G_M',float),('A',float),('CDG_Y',float),('CDG_Z',float),('IY_G',float),('IZ_G',float),('IYZ_G',float),('IY',float),('IZ',float),('ALPHA',float),('Y_MAX',float),('Y_MIN',float),('Z_MAX',float),('Z_MIN',float),('R_MAX',float),('RY',float),('RZ',float),('Y_P',float),('Z_P',float),('IY_P',float),('IZ_P',float),('IYZ_P',float),('IYR2_G',float),('IZR2_G',float),('IYR2',float),('IZR2',float),('IYR2_P',float),('IZR2_P',float),('JX',float),('RT',float),('PCTY',float),('PCTZ',float),('EY',float),('EZ',float),('JG',float),('AY',float),('AZ',float)]
 n=len(sect.values()[nameOutput[0][0]])
 dataOutput = np.zeros(n,dtype=nameOutput)
 for str in [y[0] for y in nameOutput]:

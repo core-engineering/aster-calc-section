@@ -1,0 +1,487 @@
+                                                                                
+                                                                                
+              -- CODE_ASTER -- VERSION : EXPLOITATION (stable) --               
+                                                                                
+                     Version 12.6.0 modifiée le 16/06/2016                      
+                     révision 77d3379d51e8 - branche 'v12'                      
+                         Copyright EDF R&D 1991 - 2016                          
+                                                                                
+                    Exécution du : Tue Dec 27 14:19:35 2016                     
+                     Nom de la machine : camille-VirtualBox                     
+                              Architecture : 64bit                              
+                          Type de processeur : x86_64                           
+      Système d'exploitation : Linux Ubuntu 16.04 xenial 4.4.0-57-generic       
+                        Langue des messages : en (UTF-8)                        
+                                                                                
+                           Version de Python : 2.7.12                           
+                           Version de NumPy : 1.11.3                            
+                           Parallélisme MPI : inactif                           
+                          Parallélisme OpenMP : actif                           
+                        Nombre de processus utilisés : 1                        
+                     Version de la librairie HDF5 : 1.8.14                      
+                      Version de la librairie MED : 3.2.0                       
+                       Librairie MFront : non disponible                        
+                     Version de la librairie MUMPS : 4.10.0                     
+                        Librairie PETSc : non disponible                        
+                    Version de la librairie SCOTCH : 5.1.10                     
+                  Mémoire limite pour l'exécution : 4800.00 Mo                  
+                   consommée par l'initialisation : 304.71 Mo                   
+                  par les objets du jeu de commandes : 0.00 Mo                  
+                 reste pour l'allocation dynamique : 4493.88 Mo                 
+                Taille limite des fichiers d'échange : 12.00 Go                 
+                                                                                
+   
+   !------------------------------------------------------------------------------------!
+   ! <A> <SUPERVIS_1>                                                                   !
+   !                                                                                    !
+   !  L'utilisation du mot-clé PAR_LOT='NON' permet d'accéder en lecture et en écriture !
+   !  au contenu des concepts Aster. De ce fait, votre étude est exclue du périmètre    !
+   !  qualifié de Code_Aster puisque toutes ses étapes ne peuvent être certifiées.      !
+   !                                                                                    !
+   !  Conseils :                                                                        !
+   !    - Il n'y a pas particulièrement de risque de résultat faux... sauf si votre     !
+   !      programmation l'introduit.                                                    !
+   !    - Distinguez le calcul lui-même (qui doit sans doute passer en PAR_LOT='OUI')   !
+   !      des post-traitements (qui nécessiteraient le mode PAR_LOT='NON') qui peuvent  !
+   !      être réalisés en POURSUITE.                                                   !
+   !                                                                                    !
+   !                                                                                    !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                     !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                             !
+   !------------------------------------------------------------------------------------!
+   
+   
+   !----------------------------------------------------------------!
+   ! <A> <MODELISA7_9>                                              !
+   !                                                                !
+   !  le GROUP_NO :  MyBorder  existe déjà, on ne le crée donc pas. !
+   !                                                                !
+   !                                                                !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette !
+   ! alarme, vous pouvez obtenir des résultats inattendus !         !
+   !----------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M1 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M2 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M3 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M4 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M5 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CATAMESS_41>                                                             !
+   !                                                                               !
+   ! Le message d'alarme 'CHARGES2_87' a été émis 5 fois, il ne sera plus affiché. !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CALCULEL_40>                                                             !
+   !                                                                               !
+   !  Erreur possible d'utilisation:                                               !
+   !    Vous avez affecté des données sur certaines mailles mais ces données       !
+   !    n'ont pas de signification pour les éléments finis portés par ces mailles. !
+   !    Il s'agit peut-être d'une erreur d'affectation.                            !
+   !                                                                               !
+   !  Champ : '.9000012.CHTH.SOURE'                                                !
+   !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
+   !  Grandeur : SOUR_R   Composante non reconnue : SOUR                           !
+   !                                                                               !
+   !  Ce problème concerne 1364 mailles                                            !
+   !  Les premières mailles concernées sont imprimées ci-dessous.                  !
+   !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M1 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M2 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M3 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M4 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M5 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CATAMESS_41>                                                             !
+   !                                                                               !
+   ! Le message d'alarme 'CHARGES2_87' a été émis 5 fois, il ne sera plus affiché. !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CALCULEL_40>                                                             !
+   !                                                                               !
+   !  Erreur possible d'utilisation:                                               !
+   !    Vous avez affecté des données sur certaines mailles mais ces données       !
+   !    n'ont pas de signification pour les éléments finis portés par ces mailles. !
+   !    Il s'agit peut-être d'une erreur d'affectation.                            !
+   !                                                                               !
+   !  Champ : '.9000016.CHTH.SOURE'                                                !
+   !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
+   !  Grandeur : SOUR_F   Composante non reconnue : SOUR                           !
+   !                                                                               !
+   !  Ce problème concerne 1364 mailles                                            !
+   !  Les premières mailles concernées sont imprimées ci-dessous.                  !
+   !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M1 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M2 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M3 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M4 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M5 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CATAMESS_41>                                                             !
+   !                                                                               !
+   ! Le message d'alarme 'CHARGES2_87' a été émis 5 fois, il ne sera plus affiché. !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CALCULEL_40>                                                             !
+   !                                                                               !
+   !  Erreur possible d'utilisation:                                               !
+   !    Vous avez affecté des données sur certaines mailles mais ces données       !
+   !    n'ont pas de signification pour les éléments finis portés par ces mailles. !
+   !    Il s'agit peut-être d'une erreur d'affectation.                            !
+   !                                                                               !
+   !  Champ : '.9000019.CHTH.SOURE'                                                !
+   !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
+   !  Grandeur : SOUR_F   Composante non reconnue : SOUR                           !
+   !                                                                               !
+   !  Ce problème concerne 1364 mailles                                            !
+   !  Les premières mailles concernées sont imprimées ci-dessous.                  !
+   !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !--------------------------------------------------------------------------------------------!
+   ! <A> <SUPERVIS_9>                                                                           !
+   !                                                                                            !
+   ! Fonctionnalité obsolète : La commande 'INTE_MAIL_2D'                                       !
+   !                                                                                            !
+   ! La fonctionnalité mentionnée ci-dessus est obsolète et son utilisation                     !
+   ! est déconseillée dans la version du code que vous utilisez.                                !
+   ! Elle sera supprimée dans la version 13.                                                    !
+   !                                                                                            !
+   ! Conseils :                                                                                 !
+   ! - pour assurer la pérennité de votre étude, modifiez votre fichier de commandes ;          !
+   ! - si vous avez un besoin impérieux de cette fonctionnalité,                                !
+   !   rapprochez-vous de votre correspondant Club utilisateur ou de l'équipe de développement. !
+   !                                                                                            !
+   !                                                                                            !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                             !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                                     !
+   !--------------------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M1 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M2 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M3 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M4 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CHARGES2_87>                                                             !
+   !                                                                               !
+   !  La maille de nom M5 n'est pas de type surfacique (triangles ou quadrangles). !
+   !  Elle ne sera pas affectée par SOURCE .                                       !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CATAMESS_41>                                                             !
+   !                                                                               !
+   ! Le message d'alarme 'CHARGES2_87' a été émis 5 fois, il ne sera plus affiché. !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+   
+   !-------------------------------------------------------------------------------!
+   ! <A> <CALCULEL_40>                                                             !
+   !                                                                               !
+   !  Erreur possible d'utilisation:                                               !
+   !    Vous avez affecté des données sur certaines mailles mais ces données       !
+   !    n'ont pas de signification pour les éléments finis portés par ces mailles. !
+   !    Il s'agit peut-être d'une erreur d'affectation.                            !
+   !                                                                               !
+   !  Champ : '.9000030.CHTH.SOURE'                                                !
+   !  Commentaire sur ce champ : Chargement provenant du mot cle SOURCE            !
+   !  Grandeur : SOUR_R   Composante non reconnue : SOUR                           !
+   !                                                                               !
+   !  Ce problème concerne 1364 mailles                                            !
+   !  Les premières mailles concernées sont imprimées ci-dessous.                  !
+   !  Type de l'élément affecté sur la première maille imprimée : THPLSE2          !
+   !                                                                               !
+   !                                                                               !
+   ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                !
+   ! alarme, vous pouvez obtenir des résultats inattendus !                        !
+   !-------------------------------------------------------------------------------!
+   
+#
+#--------------------------------------------------------------------------------
+##ASTER 12.06.00 CONCEPT section CALCULE LE 27/12/2016 A 14:21:01 DE TYPE         
+#TABLE_SDASTER                                                                   
+LIEU                     ENTITE   A_M          CDG_Y_M      CDG_Z_M      IY_G_M       IZ_G_M       IYZ_G_M      Y_MAX        Z_MAX        Y_MIN        Z_MIN        R_MAX        A            CDG_Y        CDG_Z        IY_G         IZ_G         IYZ_G        IY           IZ           ALPHA        Y_P          Z_P          IY_P         IZ_P         IYZ_P        JX           AY           AZ           EY           EZ           PCTY         PCTZ         JG           KY           KZ           IYR2_G       IZR2_G       IYR2         IZR2         IYR2_P       IZR2_P       RY           RZ           RT          
+.9000003                 TOUT      7.80317E+03 -4.17008E-15  2.73357E-15  1.05589E+08  3.66426E+07  1.62794E-09  1.32000E+02  1.40000E+02 -1.32000E+02 -1.40000E+02  1.92416E+02  7.80317E+03 -4.17008E-15  2.73357E-15  1.05589E+08  3.66426E+07  1.62794E-09  3.66426E+07  1.05589E+08  9.00000E+01  0.00000E+00  0.00000E+00  1.05589E+08  3.66426E+07  1.62794E-09  3.26125E+05  4.32051E+00  1.51432E+00 -1.48217E-05  3.32621E-06 -3.32621E-06 -1.48217E-05  5.78719E+11  0.00000E+00  0.00000E+00  6.55313E-03 -1.19722E-02  1.19722E-02  6.55313E-03  6.55410E-03 -1.19731E-02  1.32000E+02  1.40000E+02  1.85368E+01
+
+ <I> <FIN> FERMETURE DE LA BASE "GLOBALE" EFFECTUEE.
+
+ <FIN> Arrêt normal dans "FIN".
+ <I> <FIN> ARRET NORMAL DANS "FIN" PAR APPEL A "JEFINI".
+  
+ <I> <FIN> MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :                      31.13 Mo
+ <I> <FIN> MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :                     236.29 Mo
+ <I> <FIN> MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS LORS DE L'EXECUTION :     547.52 Mo
+
+ ********************************************************************************
+ * COMMAND                  :       USER :     SYSTEM :   USER+SYS :    ELAPSED *
+ ********************************************************************************
+ * init (jdc)               :      83.70 :       0.22 :      83.92 :      85.71 *
+ *  . compile               :       0.00 :       0.00 :       0.00 :       0.01 *
+ *  . exec_compile          :      83.47 :       0.20 :      83.67 :      85.45 *
+ * DEBUT                    :       0.03 :       0.02 :       0.05 :       0.11 *
+ * LIRE_MAILLAGE            :       0.08 :       0.01 :       0.09 :       0.12 *
+ * MACR_CARA_POUTRE         :      83.28 :       0.12 :      83.40 :      85.00 *
+ * FIN                      :       0.03 :       0.04 :       0.07 :       0.16 *
+ *  . part Superviseur      :       0.55 :       0.05 :       0.60 :       0.72 *
+ *  . part Fortran          :      83.15 :       0.17 :      83.32 :      84.98 *
+ ********************************************************************************
+ * TOTAL_JOB                :      83.70 :       0.22 :      83.92 :      85.71 *
+ ********************************************************************************
+
